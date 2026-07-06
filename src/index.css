@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 0 0% 4%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 43 100% 50%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 43 100% 50%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #0A0A0A;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(255, 184, 0, 0.2);
+    color: #0A0A0A;
+  }
+}
+
+@layer components {
+  .gradient-gold {
+    background: linear-gradient(135deg, #FFB800, #FFD700, #D4A94A);
+  }
+
+  .gradient-void {
+    background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+  }
+
+  .gradient-purple-flow {
+    background: linear-gradient(135deg, #6C2BD9, #9B6EF3);
+  }
+
+  .gradient-subtle-fade {
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.03));
+  }
+
+  .section-bridge-light-dark {
+    background: linear-gradient(180deg, #FFFFFF 0%, #0A0A0A 100%);
+    height: 120px;
+    width: 100%;
+  }
+
+  .section-bridge-dark-light {
+    background: linear-gradient(180deg, #0A0A0A 0%, #FFFFFF 100%);
+    height: 120px;
+    width: 100%;
+  }
+
+  .section-bridge-dark-surface {
+    background: linear-gradient(180deg, #0A0A0A 0%, #111111 100%);
+    height: 120px;
+    width: 100%;
+  }
+
+  .section-bridge-surface-dark {
+    background: linear-gradient(180deg, #111111 0%, #0A0A0A 100%);
+    height: 120px;
+    width: 100%;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FFB800, #FFD700, #D4A94A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .max-w-content {
+    max-width: 1280px;
+  }
+
+  .max-w-content-wide {
+    max-width: 1440px;
+  }
+
+  .max-w-content-narrow {
+    max-width: 720px;
+  }
+}

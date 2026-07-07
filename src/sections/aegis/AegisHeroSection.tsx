@@ -21,6 +21,15 @@ export default function AegisHeroSection() {
               </span>
             </motion.div>
 
+            <motion.img
+              src="/images/brand/aegis-logo.png"
+              alt="AEGIS"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="w-16 h-16 object-contain mb-4"
+            />
+
             <h1 className="text-display text-white mb-2">
               {letters.map((letter, i) => (
                 <motion.span

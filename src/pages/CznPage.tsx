@@ -1,9 +1,9 @@
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
-import { Tag, Gift, Layers, Gavel, Scale, FileCheck, Eye, ShieldCheck } from 'lucide-react';
+import { Tag, Gift, Layers, Gavel, Scale, FileCheck, Eye, ShieldCheck, Download, FileText } from 'lucide-react';
 
 const utilities = [
-  { icon: <Tag size={22} />, title: 'Transaction Discounts', desc: 'Pay platform fees with CZN and receive automatic discounts on every transaction. The more you use, the more you save.' },
+  { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts', desc: 'AEGIS routes every transaction to the best path automatically. Pay the resulting network and platform fees in CZN and receive automatic discounts — the more you use, the more you save.' },
   { icon: <Gift size={22} />, title: 'Platform Rewards', desc: 'Earn CZN rewards for active platform usage, referrals, and contributing to the ecosystem.' },
   { icon: <Layers size={22} />, title: 'Ecosystem Access', desc: 'Unlock premium features, priority processing, and exclusive tools across all Cozanet products.' },
   { icon: <Gavel size={22} />, title: 'Future Governance', desc: 'CZN will enable participation in ecosystem governance decisions as the platform matures.' },
@@ -55,7 +55,7 @@ export default function CznPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-body-lg text-coz-slate max-w-[640px] mt-6">
-              CZN is the native utility token of the Cozanet ecosystem. It enables access to platform features, provides transaction benefits, and powers ecosystem incentives. CZN derives its value from utility — not speculation.
+              CZN is the native utility token of the Cozanet ecosystem. AEGIS is the smart router that finds and executes the best path for every transaction — CZN is the token used to pay and discount the fees AEGIS generates along the way, plus unlock platform access and ecosystem rewards. CZN does not route funds and derives its value from utility, not speculation.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
@@ -135,6 +135,52 @@ export default function CznPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <div className="section-bridge-dark-light" />
+
+      {/* Brand Assets */}
+      <section className="bg-white py-section">
+        <div className="max-w-content mx-auto px-6">
+          <SectionHeader label="Brand Assets" headline="Logo &amp; media kit." description="Official CZN logo files for exchanges, listing platforms, and press. Free to use for accurate representation of CZN." />
+          <div className="grid sm:grid-cols-3 gap-6 mt-12">
+            <div className="bg-coz-surface border border-coz-border rounded-card p-6 flex flex-col items-center text-center">
+              <img src="/brand-assets/czn-icon-32.svg" alt="CZN icon SVG" className="w-16 h-16 object-contain mb-4" />
+              <h4 className="text-h4 text-coz-black mb-1">SVG (Vector)</h4>
+              <p className="text-[0.8125rem] text-coz-slate mb-4">Scalable icon, 32×32 default — ideal for listings and app integrations.</p>
+              <a href="/brand-assets/czn-icon-32.svg" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
+                <Download size={16} /> Download SVG
+              </a>
+            </div>
+            <div className="bg-coz-surface border border-coz-border rounded-card p-6 flex flex-col items-center text-center">
+              <img src="/brand-assets/czn-icon-256.png" alt="CZN icon 256px PNG" className="w-16 h-16 object-contain mb-4" />
+              <h4 className="text-h4 text-coz-black mb-1">PNG · 256×256</h4>
+              <p className="text-[0.8125rem] text-coz-slate mb-4">Transparent background, standard resolution for most token lists.</p>
+              <a href="/brand-assets/czn-icon-256.png" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
+                <Download size={16} /> Download PNG
+              </a>
+            </div>
+            <div className="bg-coz-surface border border-coz-border rounded-card p-6 flex flex-col items-center text-center">
+              <img src="/brand-assets/czn-icon-512.png" alt="CZN icon 512px PNG" className="w-16 h-16 object-contain mb-4" />
+              <h4 className="text-h4 text-coz-black mb-1">PNG · 512×512</h4>
+              <p className="text-[0.8125rem] text-coz-slate mb-4">High resolution, for press kits and large-format use.</p>
+              <a href="/brand-assets/czn-icon-512.png" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
+                <Download size={16} /> Download PNG
+              </a>
+            </div>
+          </div>
+          <ScrollReveal delay={0.2}>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-coz-black rounded-card p-6">
+              <div className="flex items-center gap-3">
+                <FileText size={22} className="text-coz-gold shrink-0" />
+                <p className="text-[0.9375rem] text-white">Looking for the full Cozanet whitepaper?</p>
+              </div>
+              <a href="/whitepaper" className="inline-flex items-center px-6 py-3 rounded-button gradient-gold text-coz-black font-medium text-[0.875rem] hover:shadow-gold-glow transition-all shrink-0">
+                Read the Whitepaper
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

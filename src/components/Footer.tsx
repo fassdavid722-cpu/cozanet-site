@@ -19,6 +19,7 @@ const socialLinks = [
 const footerLinks = {
   products: [
     { label: 'AEGIS', href: '/aegis' },
+    { label: 'CZN Token', href: '/czn' },
     { label: 'AI Platform', href: '/products' },
     { label: 'Automation', href: '/products' },
     { label: 'Developer Platform', href: '/developers' },

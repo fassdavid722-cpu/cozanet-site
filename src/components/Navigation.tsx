@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Products', href: '/products' },
+  { label: 'CZN Token', href: '/czn' },
   { label: 'Technology', href: '/technology' },
   { label: 'Developers', href: '/developers' },
   { label: 'Security', href: '/security' },

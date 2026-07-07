@@ -63,7 +63,7 @@ export default function Navigation() {
         <div className="max-w-content-wide mx-auto w-full px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/images/brand/cozanet-logo.png" alt="Cozanet" className="w-7 h-7 object-contain" />
+            <img src="/images/brand/cozanet-logo.png" alt="Cozanet" className="w-11 h-11 object-contain" />
             <span className="text-[1rem] font-semibold text-coz-black tracking-tight">Cozanet</span>
           </Link>
 

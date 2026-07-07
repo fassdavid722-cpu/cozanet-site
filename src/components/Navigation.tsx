@@ -63,29 +63,7 @@ export default function Navigation() {
         <div className="max-w-content-wide mx-auto w-full px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <defs>
-                <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28">
-                  <stop offset="0%" stopColor="#FFB800" />
-                  <stop offset="50%" stopColor="#FFD700" />
-                  <stop offset="100%" stopColor="#D4A94A" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12c3.5 0 6.6-1.5 8.8-3.9"
-                stroke="url(#logoGrad)"
-                strokeWidth="3"
-                fill="none"
-                strokeLinecap="round"
-              />
-              <path
-                d="M14 8c-3.314 0-6 2.686-6 6s2.686 6 6 6c1.7 0 3.2-.7 4.3-1.9"
-                stroke="url(#logoGrad)"
-                strokeWidth="2.5"
-                fill="none"
-                strokeLinecap="round"
-              />
-            </svg>
+            <img src="/images/brand/cozanet-logo.png" alt="Cozanet" className="w-7 h-7 object-contain" />
             <span className="text-[1rem] font-semibold text-coz-black tracking-tight">Cozanet</span>
           </Link>
 

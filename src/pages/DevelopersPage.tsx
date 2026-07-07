@@ -27,7 +27,7 @@ const steps = [
 const resources = [
   { icon: <BookOpen size={24} className="text-coz-gold" />, title: 'Documentation', link: 'docs.cozanet.io' },
   { icon: <Code size={24} className="text-coz-gold" />, title: 'API Reference', link: 'api.cozanet.io' },
-  { icon: <Github size={24} className="text-coz-gold" />, title: 'GitHub', link: 'github.com/cozanet' },
+  { icon: <Github size={24} className="text-coz-gold" />, title: 'GitHub', link: 'github.com/fassdavid722-cpu', href: 'https://github.com/fassdavid722-cpu' },
   { icon: <Globe size={24} className="text-coz-gold" />, title: 'Status Page', link: 'status.cozanet.io' },
 ];
 
@@ -168,7 +168,12 @@ export default function DevelopersPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {resources.map((r, i) => (
               <ScrollReveal key={r.title} delay={i * 0.08}>
-                <a href="#" className="block bg-coz-charcoal border border-coz-charcoal-light rounded-card p-6 transition-all hover:border-coz-slate group">
+                <a
+                  href={r.href ?? '#'}
+                  target={r.href ? '_blank' : undefined}
+                  rel={r.href ? 'noopener noreferrer' : undefined}
+                  className="block bg-coz-charcoal border border-coz-charcoal-light rounded-card p-6 transition-all hover:border-coz-slate group"
+                >
                   <div className="w-12 h-12 rounded-xl bg-coz-gold-light/10 flex items-center justify-center mb-4">
                     {r.icon}
                   </div>

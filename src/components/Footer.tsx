@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter } from 'lucide-react';
+
+function TelegramIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21.94 4.29a1.5 1.5 0 0 0-1.53-.24L2.87 10.66a1.4 1.4 0 0 0 .07 2.64l4.53 1.45 1.74 5.42a1.4 1.4 0 0 0 2.34.55l2.5-2.4 4.4 3.24a1.5 1.5 0 0 0 2.37-.9l3.14-14.5a1.5 1.5 0 0 0-.02-.87ZM9.4 14.02l9.29-6.9c.2-.15.42.12.24.3l-7.6 7.03a1.4 1.4 0 0 0-.4.75l-.3 2.03-1.23-3.21Z" />
+    </svg>
+  );
+}
+
+const socialLinks = [
+  { Icon: Twitter, href: 'https://x.com/CozyCrypto_io', label: 'X (Twitter)' },
+  { Icon: TelegramIcon, href: 'https://t.me/CozanetOfficial', label: 'Telegram' },
+  { Icon: Github, href: 'https://github.com/fassdavid722-cpu', label: 'GitHub' },
+];
 
 const footerLinks = {
   products: [
@@ -14,7 +28,7 @@ const footerLinks = {
     { label: 'Documentation', href: '/developers' },
     { label: 'API Reference', href: '/developers' },
     { label: 'SDKs', href: '/developers' },
-    { label: 'GitHub', href: '#' },
+    { label: 'GitHub', href: 'https://github.com/fassdavid722-cpu', external: true },
     { label: 'Status Page', href: '/company' },
   ],
   company: [
@@ -72,14 +86,25 @@ export default function Footer() {
                 {category}
               </h3>
               <ul className="space-y-3">
-                {links.map((link) => (
+                {links.map((link: { label: string; href: string; external?: boolean }) => (
                   <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-[0.875rem] text-coz-slate-light hover:text-white transition-colors duration-200 leading-relaxed"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[0.875rem] text-coz-slate-light hover:text-white transition-colors duration-200 leading-relaxed"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.href}
+                        className="text-[0.875rem] text-coz-slate-light hover:text-white transition-colors duration-200 leading-relaxed"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -96,12 +121,14 @@ export default function Footer() {
             © 2025 Cozanet. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            {[Github, Twitter, Linkedin].map((Icon, i) => (
+            {socialLinks.map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-coz-slate hover:text-white transition-colors duration-200"
-                aria-label="Social link"
+                aria-label={label}
               >
                 <Icon size={20} />
               </a>

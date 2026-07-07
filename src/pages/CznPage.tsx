@@ -45,8 +45,13 @@ export default function CznPage() {
             </span>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h1 className="text-h1 text-coz-black">CZN</h1>
-            <p className="text-h3 text-coz-slate mt-2">Native Utility Token</p>
+            <div className="flex items-center gap-4">
+              <img src="/images/brand/czn-logo.png" alt="CZN" className="w-16 h-16 object-contain shrink-0" />
+              <div>
+                <h1 className="text-h1 text-coz-black">CZN</h1>
+                <p className="text-h3 text-coz-slate mt-2">Native Utility Token</p>
+              </div>
+            </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-body-lg text-coz-slate max-w-[640px] mt-6">

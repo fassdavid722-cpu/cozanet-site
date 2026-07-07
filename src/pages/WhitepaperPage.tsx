@@ -1,7 +1,49 @@
+import { useState } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download, ExternalLink, Copy, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+function truncateAddress(addr: string) {
+  return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
+}
+
+function ContractAddressValue({ address }: { address: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // clipboard not available, ignore
+    }
+  };
+  return (
+    <div className="flex items-center gap-2 flex-wrap justify-end">
+      <span className="font-mono text-[0.8125rem] sm:text-[0.9375rem] text-white font-medium">
+        {truncateAddress(address)}
+      </span>
+      <button
+        onClick={handleCopy}
+        aria-label="Copy contract address"
+        className="text-coz-slate hover:text-coz-gold transition-colors shrink-0"
+      >
+        {copied ? <Check size={16} /> : <Copy size={16} />}
+      </button>
+      <a
+        href={`https://bscscan.com/token/${address}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View on BscScan"
+        className="text-coz-slate hover:text-coz-gold transition-colors shrink-0"
+      >
+        <ExternalLink size={16} />
+      </a>
+    </div>
+  );
+}
+
 
 const toc = [
   '1. Abstract',
@@ -20,7 +62,8 @@ const tokenSpecs = [
   { label: 'Token Name', value: 'Cozanet' },
   { label: 'Token Symbol', value: 'CZN' },
   { label: 'Token Standard', value: 'BEP-20 (BSC)' },
-  { label: 'Total Supply', value: '1,000,000,000 CZN (fixed, non-inflationary)' },
+  { label: 'Total Supply', value: '100,000,000,000,000,000,000 CZN' },
+  { label: 'Target Supply (Post-Burn)', value: '400,000,000 CZN' },
   { label: 'Decimals', value: '9' },
   { label: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
   { label: 'Contract Address', value: '0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA' },
@@ -198,13 +241,20 @@ export default function WhitepaperPage() {
               <div className="bg-coz-black border border-coz-charcoal-light rounded-card p-8">
                 <h4 className="text-h4 text-white mb-6">Token Specification</h4>
                 {tokenSpecs.map((s) => (
-                  <div key={s.label} className="flex justify-between items-center py-3 border-b border-coz-charcoal-light">
-                    <span className="text-[0.8125rem] text-coz-slate uppercase tracking-[0.04em]">{s.label}</span>
-                    <span className="text-[0.9375rem] text-white font-medium">{s.value}</span>
+                  <div key={s.label} className="flex justify-between items-center py-3 border-b border-coz-charcoal-light gap-4">
+                    <span className="text-[0.8125rem] text-coz-slate uppercase tracking-[0.04em] shrink-0">{s.label}</span>
+                    {s.label === 'Contract Address' ? (
+                      <ContractAddressValue address={s.value} />
+                    ) : (
+                      <span className="text-[0.9375rem] text-white font-medium text-right">{s.value}</span>
+                    )}
                   </div>
                 ))}
                 <p className="text-[0.75rem] text-coz-slate mt-4">
                   Always verify the contract address on BscScan before interacting with CZN.
+                </p>
+                <p className="text-[0.75rem] text-coz-slate mt-2">
+                  As the Cozanet ecosystem grows, a portion of CZN in circulation will be periodically burned, reducing total supply toward a long-term target of 400,000,000 CZN.
                 </p>
               </div>
             </ScrollReveal>

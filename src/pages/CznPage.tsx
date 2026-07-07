@@ -1,6 +1,48 @@
+import { useState } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
-import { Tag, Gift, Layers, Gavel, Scale, FileCheck, Eye, ShieldCheck, Download, FileText } from 'lucide-react';
+import { Tag, Gift, Layers, Gavel, Scale, FileCheck, Eye, ShieldCheck, Download, FileText, Copy, Check, ExternalLink } from 'lucide-react';
+
+function truncateAddress(addr: string) {
+  return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
+}
+
+function ContractAddressValue({ address }: { address: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // clipboard not available, ignore
+    }
+  };
+  return (
+    <div className="flex items-center gap-2 flex-wrap justify-end">
+      <span className="font-mono text-[0.8125rem] sm:text-[0.9375rem] text-white font-medium">
+        {truncateAddress(address)}
+      </span>
+      <button
+        onClick={handleCopy}
+        aria-label="Copy contract address"
+        className="text-coz-slate hover:text-coz-gold transition-colors shrink-0"
+      >
+        {copied ? <Check size={16} /> : <Copy size={16} />}
+      </button>
+      <a
+        href={`https://bscscan.com/token/${address}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View on BscScan"
+        className="text-coz-slate hover:text-coz-gold transition-colors shrink-0"
+      >
+        <ExternalLink size={16} />
+      </a>
+    </div>
+  );
+}
+
 
 const utilities = [
   { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts', desc: 'AEGIS routes every transaction to the best path automatically. Pay the resulting network and platform fees in CZN and receive automatic discounts — the more you use, the more you save.' },
@@ -13,7 +55,8 @@ const tokenSpecs = [
   { label: 'Token Name', value: 'Cozanet' },
   { label: 'Token Symbol', value: 'CZN' },
   { label: 'Token Standard', value: 'BEP-20 (BSC)' },
-  { label: 'Total Supply', value: '1,000,000,000 CZN' },
+  { label: 'Total Supply', value: '100,000,000,000,000,000,000 CZN' },
+  { label: 'Target Supply (Post-Burn)', value: '400,000,000 CZN' },
   { label: 'Decimals', value: '9' },
   { label: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
   { label: 'Contract Address', value: '0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA' },
@@ -102,12 +145,21 @@ export default function CznPage() {
             <div>
               {tokenSpecs.map((spec, i) => (
                 <ScrollReveal key={spec.label} delay={i * 0.06}>
-                  <div className="flex justify-between items-center py-5 border-b border-coz-charcoal-light">
-                    <span className="text-[0.875rem] text-coz-slate uppercase tracking-[0.04em]">{spec.label}</span>
-                    <span className="text-[1rem] text-white font-medium">{spec.value}</span>
+                  <div className="flex justify-between items-center py-5 border-b border-coz-charcoal-light gap-4">
+                    <span className="text-[0.875rem] text-coz-slate uppercase tracking-[0.04em] shrink-0">{spec.label}</span>
+                    {spec.label === 'Contract Address' ? (
+                      <ContractAddressValue address={spec.value} />
+                    ) : (
+                      <span className="text-[1rem] text-white font-medium text-right">{spec.value}</span>
+                    )}
                   </div>
                 </ScrollReveal>
               ))}
+              <ScrollReveal delay={0.4}>
+                <p className="text-[0.8125rem] text-coz-slate mt-5">
+                  As the Cozanet ecosystem grows, a portion of CZN in circulation will be periodically burned, reducing total supply toward a long-term target of 400,000,000 CZN.
+                </p>
+              </ScrollReveal>
             </div>
             {/* Distribution */}
             <ScrollReveal delay={0.3} direction="right">

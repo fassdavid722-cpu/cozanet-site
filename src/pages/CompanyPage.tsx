@@ -43,10 +43,28 @@ const services = [
 export default function CompanyPage() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: 'General', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message. We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: 'General', message: '' });
+    setSending(true);
+    try {
+      const res = await fetch(
+        'https://superagent-ae0aaf02.base44.app/functions/sendCozanetContactEmail',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      );
+      if (!res.ok) throw new Error('Request failed');
+      alert('Thank you for your message. We will get back to you soon.');
+      setFormData({ name: '', email: '', subject: 'General', message: '' });
+    } catch {
+      alert('Something went wrong sending your message. Please try again or email us directly at info@cozanet.net.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -200,10 +218,10 @@ export default function CompanyPage() {
               </ScrollReveal>
               <div className="mt-8 space-y-3">
                 {[
-                  { label: 'hello@cozanet.io', gold: true },
-                  { label: 'support@cozanet.io', gold: false },
-                  { label: 'security@cozanet.io', gold: false },
-                  { label: 'press@cozanet.io', gold: false },
+                  { label: 'info@cozanet.net', gold: true },
+                  { label: 'team@cozanet.net', gold: false },
+                  { label: 'support@cozanet.net', gold: false },
+                  { label: 'press@cozanet.net', gold: false },
                 ].map((email) => (
                   <ScrollReveal key={email.label} delay={0.2}>
                     <div className="flex items-center gap-3">
@@ -266,9 +284,10 @@ export default function CompanyPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-button gradient-gold text-coz-black font-medium text-[0.9375rem] hover:shadow-gold-glow transition-all"
+                    disabled={sending}
+                    className="w-full py-3.5 rounded-button gradient-gold text-coz-black font-medium text-[0.9375rem] hover:shadow-gold-glow transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {sending ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>

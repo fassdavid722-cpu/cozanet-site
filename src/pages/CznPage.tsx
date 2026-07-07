@@ -12,10 +12,11 @@ const utilities = [
 const tokenSpecs = [
   { label: 'Token Name', value: 'Cozanet' },
   { label: 'Token Symbol', value: 'CZN' },
-  { label: 'Token Standard', value: 'SPL (Solana)' },
+  { label: 'Token Standard', value: 'BEP-20 (BSC)' },
   { label: 'Total Supply', value: '1,000,000,000 CZN' },
   { label: 'Decimals', value: '9' },
-  { label: 'Blockchain', value: 'Solana' },
+  { label: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
+  { label: 'Contract Address', value: '0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA' },
 ];
 
 const distribution = [

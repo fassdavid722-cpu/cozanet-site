@@ -19,10 +19,11 @@ const toc = [
 const tokenSpecs = [
   { label: 'Token Name', value: 'Cozanet' },
   { label: 'Token Symbol', value: 'CZN' },
-  { label: 'Token Standard', value: 'SPL (Solana)' },
+  { label: 'Token Standard', value: 'BEP-20 (BSC)' },
   { label: 'Total Supply', value: '1,000,000,000 CZN (fixed, non-inflationary)' },
   { label: 'Decimals', value: '9' },
-  { label: 'Blockchain', value: 'Solana' },
+  { label: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
+  { label: 'Contract Address', value: '0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA' },
 ];
 
 const distribution = [
@@ -203,7 +204,7 @@ export default function WhitepaperPage() {
                   </div>
                 ))}
                 <p className="text-[0.75rem] text-coz-slate mt-4">
-                  Contract address will be published on this page and the CZN token page once deployed and verified.
+                  Always verify the contract address on BscScan before interacting with CZN.
                 </p>
               </div>
             </ScrollReveal>

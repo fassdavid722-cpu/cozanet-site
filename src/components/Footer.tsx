@@ -31,7 +31,7 @@ const footerLinks = {
     { label: 'API Reference', href: '/developers' },
     { label: 'SDKs', href: '/developers' },
     { label: 'GitHub', href: 'https://github.com/fassdavid722-cpu', external: true },
-    { label: 'Status Page', href: '/company' },
+    { label: 'Status Page', href: '/documentation' },
   ],
   company: [
     { label: 'Mission & Vision', href: '/company' },
@@ -41,9 +41,9 @@ const footerLinks = {
     { label: 'Contact', href: '/company' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Cookie Policy', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
+    { label: 'Cookie Policy', href: '/cookies' },
     { label: 'Security', href: '/security' },
   ],
 };
@@ -120,7 +120,7 @@ export default function Footer() {
           className="border-t border-coz-border-dark pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p className="text-[0.75rem] text-coz-slate">
-            © 2025 Cozanet. All rights reserved.
+            © 2026 Cozanet. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             {socialLinks.map(({ Icon, href, label }) => (

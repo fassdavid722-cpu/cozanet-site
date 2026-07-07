@@ -1,61 +1,62 @@
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Lock, Fingerprint, KeyRound, FileSearch, Server, HeartHandshake, Copy, Check } from 'lucide-react';
 
-const complianceBadges = ['SOC 2 Type II', 'ISO 27001', 'GDPR Compliant', 'Penetration Tested'];
+const complianceBadges = ['Engine Isolation', 'TLS 1.3', 'Row-Level Security', 'HD Key Derivation'];
 
 const pillars = [
   {
     icon: <Lock size={24} className="text-coz-gold" />,
     title: 'Encryption',
-    body: 'All data is encrypted using industry-standard algorithms and protocols.',
-    items: ['AES-256-GCM for data at rest', 'TLS 1.3 for data in transit', 'Hardware Security Module integration', 'Automatic key rotation every 90 days'],
+    body: 'Data is encrypted using industry-standard protocols, both in transit and at rest.',
+    items: ['TLS 1.3 for all data in transit', 'Encryption at rest provided by our managed database and hosting providers', 'Secrets and API keys stored in encrypted platform secret stores, never in source control or the frontend bundle'],
   },
   {
     icon: <Fingerprint size={24} className="text-coz-gold" />,
-    title: 'Identity & Access Management',
-    body: 'Comprehensive identity verification and access control at every layer.',
-    items: ['Multi-factor authentication (TOTP, WebAuthn, SMS)', 'Biometric verification support', 'Role-based access control (RBAC)', 'Continuous identity verification', 'Session management with automatic timeout'],
+    title: 'Identity & Access',
+    body: 'Every request is authenticated independently at more than one layer.',
+    items: ['Supabase Auth-issued session tokens (JWT), verified by both the Gateway and the destination engine', 'Email verification via one-time codes before an account can be onboarded', 'Row-Level Security on the database so records are only visible to the account that owns them'],
   },
   {
     icon: <KeyRound size={24} className="text-coz-gold" />,
     title: 'Key Management',
-    body: 'Enterprise-grade key lifecycle management with hardware-backed security.',
-    items: ['HSM-backed key storage (FIPS 140-2 Level 3)', 'Threshold signature schemes', 'Secure key derivation (PBKDF2, Argon2)', 'Automated key rotation and revocation', 'Multi-signature wallet support'],
+    body: 'Wallet key material is isolated in a single, purpose-built service.',
+    items: ['Wallet private keys are generated and held only inside the Wallet Vault engine via hierarchical-deterministic (HD) derivation', 'The Wallet Vault engine has no public-facing API — reachable only via internal, API-key-authenticated calls from other engines', 'Multi-signature wallet support is on our roadmap, not yet implemented'],
   },
   {
     icon: <FileSearch size={24} className="text-coz-gold" />,
-    title: 'Audit & Compliance',
-    body: 'Complete visibility and accountability for all operations.',
-    items: ['Immutable, cryptographically signed audit logs', 'Automated compliance monitoring', 'Quarterly third-party security assessments', 'Annual penetration testing by top firms', 'Real-time anomaly detection'],
+    title: 'Audit & Data Integrity',
+    body: 'State changes are tracked, not silently overwritten.',
+    items: ['Every table supports optimistic locking (a version check on every write) and soft deletes, so records are archived rather than destroyed', 'Every request carries a correlation ID that traces it end-to-end through the Gateway and into the engine that handled it', 'A dedicated Audit Engine for immutable, cross-engine event logging is in development — see our Documentation page for current status'],
   },
   {
     icon: <Server size={24} className="text-coz-gold" />,
-    title: 'Infrastructure Security',
-    body: 'Defense-in-depth network and infrastructure protection.',
-    items: ['Network segmentation and micro-segmentation', 'DDoS protection with global scrubbing', 'Intrusion detection and prevention systems', 'Automated vulnerability scanning', '24/7 Security Operations Center'],
+    title: 'Infrastructure',
+    body: 'Every engine is deployed, scaled, and isolated independently.',
+    items: ['Each engine owns its own database tables and its own deployment — no engine can reach into another engine\u2019s data directly', 'Engine-to-engine calls are authenticated with a dedicated credential per engine, not a shared secret', 'Hosted on infrastructure with built-in network-level protections (TLS termination, standard DDoS mitigation) at the platform layer'],
   },
   {
     icon: <HeartHandshake size={24} className="text-coz-gold" />,
     title: 'Responsible Disclosure',
-    body: 'We believe in transparency and collaboration with the security community.',
-    items: ['Active bug bounty program', 'Coordinated vulnerability disclosure policy', 'Security advisory publication', 'Rapid patch deployment (mean time: 24 hours)', 'Security@cozanet.io contact'],
+    body: 'We want to hear about vulnerabilities before anyone else does.',
+    items: ['Coordinated vulnerability disclosure — report privately, give us a chance to fix it before public disclosure', 'A formal bug bounty program is planned but not live yet', 'We aim to acknowledge reports within 48 hours'],
   },
 ];
 
 const certifications = [
-  { name: 'SOC 2 Type II', status: 'Certified', statusColor: 'text-green-400', desc: 'Independent audit of our security, availability, and confidentiality controls. Audited annually by a Big Four firm.', date: 'Last audited: March 2025' },
-  { name: 'ISO 27001', status: 'Certified', statusColor: 'text-green-400', desc: 'Information Security Management System certification covering all aspects of our security program.', date: 'Certified since: January 2025' },
-  { name: 'GDPR', status: 'Compliant', statusColor: 'text-green-400', desc: 'Full compliance with EU General Data Protection Regulation. Data Processing Agreements available for enterprise customers.', date: 'Continuous compliance' },
-  { name: 'Penetration Testing', status: 'Tested', statusColor: 'text-green-400', desc: 'Annual network and application penetration testing by certified security firms. Quarterly automated security scanning.', date: 'Last tested: February 2025' },
+  { name: 'SOC 2 Type II', status: 'Planned', statusColor: 'text-coz-gold', desc: 'Independent audit of security, availability, and confidentiality controls. Not yet started — targeted once AEGIS reaches general availability.' },
+  { name: 'ISO 27001', status: 'Planned', statusColor: 'text-coz-gold', desc: 'Information Security Management System certification. Not yet started.' },
+  { name: 'GDPR', status: 'In Progress', statusColor: 'text-coz-gold', desc: 'We follow core GDPR principles today (data minimization, right to deletion on request) but have not completed a formal compliance review or published a Data Processing Agreement yet.' },
+  { name: 'Third-Party Penetration Testing', status: 'Planned', statusColor: 'text-coz-gold', desc: 'No third-party penetration test has been performed yet. Internal security review is ongoing as each engine ships.' },
 ];
 
 export default function SecurityPage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('security@cozanet.io');
+    navigator.clipboard.writeText('security@cozanet.net');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -73,7 +74,7 @@ export default function SecurityPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-body-lg text-coz-slate-light max-w-[640px] mt-4">
-              We approach security with the same rigor as the world's most trusted technology companies. Every architectural decision, every line of code, and every operational process is designed to protect what matters most.
+              Every architectural decision is made with security first — mainly through isolating every sensitive capability behind its own boundary. Below is what's actually implemented today, and what's still on our roadmap.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3} className="mt-10">
@@ -91,7 +92,7 @@ export default function SecurityPage() {
       {/* Security Pillars */}
       <section className="bg-white py-section">
         <div className="max-w-content mx-auto px-6">
-          <SectionHeader label="Security Program" headline="Defense in depth." />
+          <SectionHeader label="Security Program" headline="Defense in depth." description="Every mechanism below is live in the running system today — described plainly, without inflating what's still on the roadmap." />
           <div className="mt-16 space-y-4">
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 0.1}>
@@ -120,6 +121,11 @@ export default function SecurityPage() {
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal delay={0.15}>
+            <p className="text-[0.8125rem] text-coz-slate mt-8 max-w-[720px]">
+              For the full technical breakdown — engine architecture, API conventions, and where each engine stands — see our <Link to="/documentation" className="text-coz-gold hover:text-coz-gold-muted transition-colors">Documentation</Link> page.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -128,17 +134,16 @@ export default function SecurityPage() {
       {/* Certifications */}
       <section className="bg-coz-black py-section">
         <div className="max-w-content mx-auto px-6">
-          <SectionHeader label="Certifications" headline="Independently verified." dark />
+          <SectionHeader label="Certifications & Audits" headline="Honest about where we are." dark description="We'd rather show you an accurate roadmap than an inflated badge wall. Nothing below is claimed as complete until it actually is." />
           <div className="grid md:grid-cols-2 gap-6 mt-16">
             {certifications.map((cert, i) => (
               <ScrollReveal key={cert.name} delay={i * 0.12}>
                 <div className="bg-coz-charcoal border border-coz-charcoal-light rounded-card p-6 md:p-8 h-full">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-h4 text-white">{cert.name}</h4>
-                    <span className={`text-[0.75rem] font-medium ${cert.statusColor}`}>{cert.status}</span>
+                    <span className={`text-[0.75rem] font-medium uppercase tracking-[0.04em] px-2.5 py-1 rounded-pill bg-coz-charcoal-light ${cert.statusColor}`}>{cert.status}</span>
                   </div>
                   <p className="text-[1rem] text-coz-slate-light leading-relaxed">{cert.desc}</p>
-                  <p className="text-[0.8125rem] text-coz-slate mt-4">{cert.date}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -154,12 +159,12 @@ export default function SecurityPage() {
           <ScrollReveal>
             <h3 className="text-h3 text-white">Report a security issue</h3>
             <p className="text-[1rem] text-coz-slate-light mt-4 max-w-[500px] mx-auto">
-              We take all security reports seriously. If you've discovered a vulnerability, please contact our security team. We follow coordinated disclosure practices.
+              We take all security reports seriously. If you've discovered a vulnerability, please contact us directly. We follow coordinated disclosure practices and aim to acknowledge reports within 48 hours.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div className="mt-8 flex items-center justify-center gap-3">
-              <code className="text-[1.25rem] font-mono text-coz-gold">security@cozanet.io</code>
+              <a href="mailto:security@cozanet.net" className="text-[1.25rem] font-mono text-coz-gold hover:text-coz-gold-muted transition-colors">security@cozanet.net</a>
               <button
                 onClick={handleCopy}
                 className="p-2 text-coz-slate hover:text-white transition-colors"
@@ -168,7 +173,6 @@ export default function SecurityPage() {
                 {copied ? <Check size={20} className="text-green-400" /> : <Copy size={20} />}
               </button>
             </div>
-            <p className="text-[0.8125rem] text-coz-slate mt-3">We aim to respond within 24 hours.</p>
           </ScrollReveal>
         </div>
       </section>

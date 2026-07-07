@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Lock, ShieldCheck, KeyRound, FileSearch, Server, HeartHandshake } from 'lucide-react';
 import SectionHeader from '../../components/SectionHeader';
 import ScrollReveal from '../../components/ScrollReveal';
@@ -65,12 +66,12 @@ export default function SecuritySection() {
           <p className="text-body-lg text-coz-slate-light mb-6">
             View our security practices and compliance certifications.
           </p>
-          <a
-            href="/security"
+          <Link
+            to="/security"
             className="inline-flex items-center px-7 py-3.5 rounded-button border border-coz-border-dark text-white font-medium text-[0.9375rem] hover:border-coz-slate-light transition-all"
           >
             Security Overview
-          </a>
+          </Link>
         </ScrollReveal>
       </div>
     </section>

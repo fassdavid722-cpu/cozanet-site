@@ -1,4 +1,5 @@
 import ScrollReveal from '../components/ScrollReveal';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Globe, Cpu, TrendingUp, Heart, BookOpen, Calendar } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
@@ -31,13 +32,13 @@ const benefits = [
 ];
 
 const services = [
-  { name: 'AEGIS Platform', status: 'Operational' },
-  { name: 'API Gateway', status: 'Operational' },
-  { name: 'Blockchain Infrastructure', status: 'Operational' },
-  { name: 'AI Services', status: 'Operational' },
-  { name: 'Automation Engine', status: 'Operational' },
-  { name: 'Developer Portal', status: 'Operational' },
-  { name: 'Documentation', status: 'Operational' },
+  { name: 'API Gateway', status: 'Live' },
+  { name: 'Identity Engine', status: 'Live' },
+  { name: 'Wallet Vault Engine', status: 'Live' },
+  { name: 'Transfer Engine', status: 'Live' },
+  { name: 'Payment Engine', status: 'Live' },
+  { name: 'AI Engine', status: 'In Development' },
+  { name: 'Public Developer API', status: 'In Development' },
 ];
 
 export default function CompanyPage() {
@@ -164,14 +165,17 @@ export default function CompanyPage() {
           <div className="mt-12 space-y-3">
             {jobs.map((job, i) => (
               <ScrollReveal key={job.title} delay={i * 0.06}>
-                <div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-coz-surface border border-coz-border rounded-xl px-6 py-5 transition-all hover:bg-white hover:shadow-card cursor-pointer">
+                <a
+                  href={`mailto:team@cozanet.net?subject=${encodeURIComponent(`Application: ${job.title}`)}`}
+                  className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-coz-surface border border-coz-border rounded-xl px-6 py-5 transition-all hover:bg-white hover:shadow-card cursor-pointer"
+                >
                   <h4 className="text-h4 text-coz-black flex-1">{job.title}</h4>
                   <span className="text-[0.875rem] text-coz-slate">{job.location}</span>
                   <span className="text-[0.875rem] text-coz-slate">{job.type}</span>
                   <span className="text-[0.875rem] font-medium text-coz-black group-hover:text-coz-gold transition-colors">
                     Apply →
                   </span>
-                </div>
+                </a>
               </ScrollReveal>
             ))}
           </div>
@@ -225,7 +229,7 @@ export default function CompanyPage() {
                 ].map((email) => (
                   <ScrollReveal key={email.label} delay={0.2}>
                     <div className="flex items-center gap-3">
-                      <span className={`font-mono text-[0.9375rem] ${email.gold ? 'text-coz-gold' : 'text-coz-slate-light'}`}>{email.label}</span>
+                      <a href={`mailto:${email.label}`} className={`font-mono text-[0.9375rem] hover:underline underline-offset-4 ${email.gold ? 'text-coz-gold' : 'text-coz-slate-light hover:text-white'}`}>{email.label}</a>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -307,9 +311,9 @@ export default function CompanyPage() {
                 <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
               </span>
-              <span className="text-h4 text-white">All Systems Operational</span>
+              <span className="text-h4 text-white">Core Engines Live</span>
             </div>
-            <p className="text-[0.8125rem] text-coz-slate mt-3">Last updated: just now</p>
+            <p className="text-[0.8125rem] text-coz-slate mt-3">Honest, continuously-updated status — not everything is live yet.</p>
           </ScrollReveal>
 
           <div className="mt-8 max-w-[400px] mx-auto space-y-3">
@@ -318,8 +322,8 @@ export default function CompanyPage() {
                 <div className="flex items-center justify-between py-3 px-4 rounded-lg bg-coz-charcoal/50">
                   <span className="text-[0.9375rem] text-white">{s.name}</span>
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-green-500" />
-                    <span className="text-[0.8125rem] text-green-400">{s.status}</span>
+                    <span className={`w-2 h-2 rounded-full ${s.status === 'Live' ? 'bg-green-500' : 'bg-coz-slate'}`} />
+                    <span className={`text-[0.8125rem] ${s.status === 'Live' ? 'text-green-400' : 'text-coz-slate-light'}`}>{s.status}</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -327,9 +331,9 @@ export default function CompanyPage() {
           </div>
 
           <ScrollReveal delay={0.5} className="mt-6">
-            <a href="#" className="text-[0.875rem] font-medium text-coz-gold hover:text-coz-gold-muted transition-colors">
-              View detailed status →
-            </a>
+            <Link to="/documentation" className="text-[0.875rem] font-medium text-coz-gold hover:text-coz-gold-muted transition-colors">
+              View detailed engine status →
+            </Link>
           </ScrollReveal>
         </div>
       </section>

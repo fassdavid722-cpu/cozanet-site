@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -13,6 +13,10 @@ import SecurityPage from './pages/SecurityPage';
 import CompanyPage from './pages/CompanyPage';
 import WhitepaperPage from './pages/WhitepaperPage';
 import DocumentationPage from './pages/DocumentationPage';
+import NotFoundPage from './pages/NotFoundPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
 
 function ScrollToTopOnNavigate() {
   const { pathname } = useLocation();
@@ -24,7 +28,7 @@ function ScrollToTopOnNavigate() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTopOnNavigate />
       <div className="min-h-screen flex flex-col">
         <Navigation />
@@ -40,12 +44,16 @@ function App() {
             <Route path="/company" element={<CompanyPage />} />
             <Route path="/whitepaper" element={<WhitepaperPage />} />
             <Route path="/documentation" element={<DocumentationPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms" element={<TermsOfServicePage />} />
+            <Route path="/cookies" element={<CookiePolicyPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />
         <ScrollToTop />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

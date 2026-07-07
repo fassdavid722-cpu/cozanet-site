@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
 import { Tag, Gift, Layers, Gavel, Scale, FileCheck, Eye, ShieldCheck, Download, FileText, Copy, Check, ExternalLink } from 'lucide-react';
@@ -182,9 +183,9 @@ export default function CznPage() {
                 <p className="text-[0.8125rem] text-coz-slate mt-5">
                   Vesting schedules apply to all non-ecosystem allocations. Full details in the transparency report.
                 </p>
-                <a href="#" className="inline-flex items-center gap-1 mt-3 text-[0.875rem] font-medium text-coz-gold hover:text-coz-gold-muted transition-colors">
-                  View Transparency Report <span>→</span>
-                </a>
+                <Link to="/whitepaper" className="inline-flex items-center gap-1 mt-3 text-[0.875rem] font-medium text-coz-gold hover:text-coz-gold-muted transition-colors">
+                  Read the Whitepaper <span>→</span>
+                </Link>
               </div>
             </ScrollReveal>
           </div>
@@ -229,9 +230,9 @@ export default function CznPage() {
                 <FileText size={22} className="text-coz-gold shrink-0" />
                 <p className="text-[0.9375rem] text-white">Looking for the full Cozanet whitepaper?</p>
               </div>
-              <a href="/whitepaper" className="inline-flex items-center px-6 py-3 rounded-button gradient-gold text-coz-black font-medium text-[0.875rem] hover:shadow-gold-glow transition-all shrink-0">
+              <Link to="/whitepaper" className="inline-flex items-center px-6 py-3 rounded-button gradient-gold text-coz-black font-medium text-[0.875rem] hover:shadow-gold-glow transition-all shrink-0">
                 Read the Whitepaper
-              </a>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
@@ -271,12 +272,12 @@ export default function CznPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              <a href="/developers" className="inline-flex items-center px-7 py-3.5 rounded-button bg-coz-black text-white font-medium text-[0.9375rem] hover:bg-coz-charcoal transition-colors">
+              <Link to="/documentation" className="inline-flex items-center px-7 py-3.5 rounded-button bg-coz-black text-white font-medium text-[0.9375rem] hover:bg-coz-charcoal transition-colors">
                 Read Documentation
-              </a>
-              <a href="#" className="inline-flex items-center px-7 py-3.5 rounded-button border border-coz-border text-coz-black font-medium text-[0.9375rem] hover:border-coz-black transition-colors">
-                View Transparency Report
-              </a>
+              </Link>
+              <Link to="/whitepaper" className="inline-flex items-center px-7 py-3.5 rounded-button border border-coz-border text-coz-black font-medium text-[0.9375rem] hover:border-coz-black transition-colors">
+                Read the Whitepaper
+              </Link>
             </div>
           </ScrollReveal>
         </div>

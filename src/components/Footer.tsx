@@ -27,6 +27,7 @@ const footerLinks = {
   ],
   resources: [
     { label: 'Documentation', href: '/developers' },
+    { label: 'Whitepaper', href: '/whitepaper' },
     { label: 'API Reference', href: '/developers' },
     { label: 'SDKs', href: '/developers' },
     { label: 'GitHub', href: 'https://github.com/fassdavid722-cpu', external: true },

@@ -11,6 +11,7 @@ import TechnologyPage from './pages/TechnologyPage';
 import DevelopersPage from './pages/DevelopersPage';
 import SecurityPage from './pages/SecurityPage';
 import CompanyPage from './pages/CompanyPage';
+import WhitepaperPage from './pages/WhitepaperPage';
 
 function ScrollToTopOnNavigate() {
   const { pathname } = useLocation();
@@ -36,6 +37,7 @@ function App() {
             <Route path="/developers" element={<DevelopersPage />} />
             <Route path="/security" element={<SecurityPage />} />
             <Route path="/company" element={<CompanyPage />} />
+            <Route path="/whitepaper" element={<WhitepaperPage />} />
           </Routes>
         </main>
         <Footer />

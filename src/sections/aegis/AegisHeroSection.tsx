@@ -68,12 +68,22 @@ export default function AegisHeroSection() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="flex flex-wrap gap-4 mt-10"
             >
-              <button className="inline-flex items-center px-7 py-3.5 rounded-button gradient-gold text-coz-black font-medium text-[0.9375rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all">
+              <a
+                href="https://aegis.cozanet.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-7 py-3.5 rounded-button gradient-gold text-coz-black font-medium text-[0.9375rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all"
+              >
                 Get Early Access
-              </button>
-              <button className="inline-flex items-center px-7 py-3.5 rounded-button border border-white/30 text-white font-medium text-[0.9375rem] hover:border-white transition-all">
+              </a>
+              <a
+                href="https://aegis.cozanet.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-7 py-3.5 rounded-button border border-white/30 text-white font-medium text-[0.9375rem] hover:border-white transition-all"
+              >
                 Watch Demo
-              </button>
+              </a>
             </motion.div>
           </div>
 

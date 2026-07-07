@@ -11,9 +11,14 @@ export default function AegisCTASection() {
           <p className="text-body-lg text-white/80 mt-4">Join the waitlist for early access to AEGIS.</p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
-          <button className="mt-8 inline-flex items-center px-10 py-4 rounded-button gradient-gold text-coz-black font-medium text-[1rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all">
+          <a
+            href="https://aegis.cozanet.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center px-10 py-4 rounded-button gradient-gold text-coz-black font-medium text-[1rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all"
+          >
             Join Waitlist
-          </button>
+          </a>
         </ScrollReveal>
         <ScrollReveal delay={0.4}>
           <p className="text-[0.875rem] text-white/50 mt-4">No spam. Unsubscribe anytime.</p>

@@ -26,7 +26,7 @@ const footerLinks = {
     { label: 'Enterprise', href: '/products' },
   ],
   resources: [
-    { label: 'Documentation', href: '/developers' },
+    { label: 'Documentation', href: '/documentation' },
     { label: 'Whitepaper', href: '/whitepaper' },
     { label: 'API Reference', href: '/developers' },
     { label: 'SDKs', href: '/developers' },

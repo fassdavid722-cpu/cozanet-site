@@ -90,7 +90,7 @@ export default function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/developers"
+              to="/documentation"
               className="text-[0.875rem] font-medium text-[#374151] hover:text-coz-black transition-colors duration-200 hover:underline underline-offset-4"
             >
               Documentation
@@ -150,7 +150,7 @@ export default function Navigation() {
                 className="mt-8 flex flex-col gap-4 items-center"
               >
                 <Link
-                  to="/developers"
+                  to="/documentation"
                   onClick={() => setMobileOpen(false)}
                   className="text-[1.125rem] text-[#374151] hover:text-coz-black"
                 >

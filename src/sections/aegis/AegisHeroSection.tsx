@@ -22,7 +22,7 @@ export default function AegisHeroSection() {
             </motion.div>
 
             <motion.img
-              src="/images/brand/aegis-logo.png"
+              src="/brand-assets/aegis-shield.svg"
               alt="AEGIS"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}

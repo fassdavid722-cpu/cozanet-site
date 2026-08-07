@@ -91,7 +91,7 @@ export default function CznPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <div className="flex items-center gap-4">
-              <img src="/images/brand/czn-logo.png" alt="CZN" className="w-24 h-24 object-contain shrink-0" />
+              <img src="/brand-assets/czn-token.svg" alt="CZN" className="w-24 h-24 shrink-0" />
               <div>
                 <h1 className="text-h1 text-coz-black">CZN</h1>
                 <p className="text-h3 text-coz-slate mt-2">Native Utility Token</p>
@@ -200,7 +200,7 @@ export default function CznPage() {
           <SectionHeader label="Brand Assets" headline="Logo &amp; media kit." description="Official CZN logo files for exchanges, listing platforms, and press. Free to use for accurate representation of CZN." />
           <div className="grid sm:grid-cols-3 gap-6 mt-12">
             <div className="bg-coz-surface border border-coz-border rounded-card p-6 flex flex-col items-center text-center">
-              <img src="/brand-assets/czn-icon-32.svg" alt="CZN icon SVG" className="w-16 h-16 object-contain mb-4" />
+              <img src="/brand-assets/czn-icon-32.svg" alt="CZN icon SVG" className="w-16 h-16 mb-4" />
               <h4 className="text-h4 text-coz-black mb-1">SVG (Vector)</h4>
               <p className="text-[0.8125rem] text-coz-slate mb-4">Scalable icon, 32×32 default — ideal for listings and app integrations.</p>
               <a href="/brand-assets/czn-icon-32.svg" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
@@ -208,10 +208,10 @@ export default function CznPage() {
               </a>
             </div>
             <div className="bg-coz-surface border border-coz-border rounded-card p-6 flex flex-col items-center text-center">
-              <img src="/brand-assets/czn-icon-256.png" alt="CZN icon 256px PNG" className="w-16 h-16 object-contain mb-4" />
+              <img src="/brand-assets/czn-icon-256.svg" alt="CZN icon 256px SVG" className="w-16 h-16 mb-4" />
               <h4 className="text-h4 text-coz-black mb-1">PNG · 256×256</h4>
               <p className="text-[0.8125rem] text-coz-slate mb-4">Transparent background, standard resolution for most token lists.</p>
-              <a href="/brand-assets/czn-icon-256.png" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
+              <a href="/brand-assets/czn-icon-256.svg" download className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-coz-black text-white text-[0.875rem] font-medium hover:bg-coz-charcoal transition-colors">
                 <Download size={16} /> Download PNG
               </a>
             </div>

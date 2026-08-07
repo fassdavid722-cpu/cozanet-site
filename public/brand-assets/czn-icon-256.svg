@@ -5,28 +5,16 @@
       <stop offset="40%" stop-color="#E0A020"/>
       <stop offset="100%" stop-color="#C08000"/>
     </linearGradient>
-    <linearGradient id="czn-gold-light" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#F5D061"/>
-      <stop offset="100%" stop-color="#E0A020"/>
-    </linearGradient>
     <radialGradient id="czn-shine" cx="35%" cy="30%" r="60%">
       <stop offset="0%" stop-color="#fff" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  
-  <!-- Outer ring -->
   <circle cx="128" cy="128" r="120" fill="url(#czn-gold)"/>
   <circle cx="128" cy="128" r="120" fill="url(#czn-shine)"/>
-  
-  <!-- Inner circle -->
   <circle cx="128" cy="128" r="100" fill="none" stroke="#C08000" stroke-width="2" opacity="0.5"/>
-  
-  <!-- CZN text -->
   <text x="128" y="148" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif"
         font-size="56" font-weight="900" fill="#5a3000" letter-spacing="-2">CZN</text>
-  
-  <!-- Decorative dots around the ring -->
   <circle cx="128" cy="18" r="4" fill="#C08000" opacity="0.6"/>
   <circle cx="128" cy="238" r="4" fill="#C08000" opacity="0.6"/>
   <circle cx="18" cy="128" r="4" fill="#C08000" opacity="0.6"/>

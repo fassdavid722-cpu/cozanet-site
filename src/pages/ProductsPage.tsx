@@ -6,9 +6,9 @@ const products = [
   {
     icon: <Shield size={28} className="text-coz-purple" />,
     title: 'AEGIS',
-    subtitle: 'Financial Operating System',
-    description: 'The flagship product. A complete financial infrastructure combining wallets, payments, AI-powered insights, portfolio management, and cross-chain operations — all unified in one elegant system.',
-    features: ['Smart Wallets', 'Global Payments', 'AI Assistant', 'Portfolio Tracking', 'Cross-Chain Bridges'],
+    subtitle: 'Programmable Financial Infrastructure',
+    description: "Cozanet's programmable financial infrastructure and smart-routing layer for digital-asset transfers and settlement. Combines identity, wallet infrastructure, transaction authorization, smart routing, settlement orchestration and payment infrastructure.",
+    features: ['Smart Routing', 'Identity', 'Wallet Infrastructure', 'Settlement', 'AI Automation'],
     href: '/aegis',
     accent: 'border-coz-purple',
   },

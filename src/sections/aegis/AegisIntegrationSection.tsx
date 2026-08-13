@@ -1,12 +1,28 @@
-import { Network, Link2, Landmark, Code2 } from 'lucide-react';
+import { Network, Route, Code2, Layers } from 'lucide-react';
 import SectionHeader from '../../components/SectionHeader';
 import ScrollReveal from '../../components/ScrollReveal';
 
 const integrations = [
-  { icon: <Network size={22} />, title: 'Cozanet Ecosystem', desc: 'Native integration with all Cozanet products. Share data, automate workflows, and leverage AI across the entire platform.' },
-  { icon: <Link2 size={22} />, title: 'Multi-Chain Support', desc: 'Connect to Ethereum, Solana, Bitcoin, and major L2 networks. Cross-chain bridges with unified asset representation.' },
-  { icon: <Landmark size={22} />, title: 'TradFi Connectivity', desc: 'Bank account linking, wire transfers, card payments, and compliance reporting for seamless crypto-traditional finance bridging.' },
-  { icon: <Code2 size={22} />, title: 'Developer APIs', desc: 'Build on AEGIS with our comprehensive APIs. White-label solutions, embedded finance, and custom integrations.' },
+  {
+    icon: <Network size={22} />,
+    title: 'Cozanet Ecosystem',
+    desc: 'Native integration with all Cozanet products. Share data, automate workflows, and leverage AI across the entire platform.',
+  },
+  {
+    icon: <Route size={22} />,
+    title: 'Multi-Rail Settlement',
+    desc: 'AEGIS routes supported transactions through appropriate settlement rails. BNB Smart Chain is live; Stellar integration is in progress; additional rails are planned.',
+  },
+  {
+    icon: <Layers size={22} />,
+    title: 'Settlement Router Architecture',
+    desc: 'Designed with a clear interface boundary between AEGIS and individual settlement providers, so new rails can be added without major frontend redesign.',
+  },
+  {
+    icon: <Code2 size={22} />,
+    title: 'Developer APIs',
+    desc: 'Build on AEGIS with APIs for transaction construction, authorization, settlement orchestration and wallet operations. Developer documentation available.',
+  },
 ];
 
 export default function AegisIntegrationSection() {
@@ -15,8 +31,8 @@ export default function AegisIntegrationSection() {
       <div className="max-w-content mx-auto px-6">
         <SectionHeader
           label="Integration"
-          headline="Connected to everything."
-          description="AEGIS integrates seamlessly with the Cozanet ecosystem and connects to the broader financial and blockchain world."
+          headline="Connected to the Cozanet ecosystem."
+          description="AEGIS integrates with the Cozanet platform and is designed to connect to multiple settlement rails through a unified architecture."
         />
         <div className="grid md:grid-cols-2 gap-6 mt-16">
           {integrations.map((item, i) => (

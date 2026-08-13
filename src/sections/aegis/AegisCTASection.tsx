@@ -1,27 +1,29 @@
 import ScrollReveal from '../../components/ScrollReveal';
+import { ArrowRight } from 'lucide-react';
 
 export default function AegisCTASection() {
   return (
     <section className="py-section-lg" style={{ background: 'linear-gradient(135deg, #6C2BD9, #9B6EF3)' }}>
       <div className="max-w-content mx-auto px-6 text-center">
         <ScrollReveal>
-          <h2 className="text-h1 text-white">Experience the future of finance.</h2>
+          <h2 className="text-h1 text-white">AEGIS by Cozanet.</h2>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
-          <p className="text-body-lg text-white/80 mt-4">Join the waitlist for early access to AEGIS.</p>
+          <p className="text-body-lg text-white/80 mt-4 max-w-[600px] mx-auto">
+            Programmable financial infrastructure and smart-routing layer for digital-asset
+            transfers and settlement. Built by Cozanet.
+          </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <a
             href="https://aegis.cozanet.net"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center px-10 py-4 rounded-button gradient-gold text-coz-black font-medium text-[1rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all"
+            className="mt-8 inline-flex items-center gap-2 px-10 py-4 rounded-button gradient-gold text-coz-black font-medium text-[1rem] hover:shadow-gold-glow hover:-translate-y-0.5 transition-all"
           >
-            Join Waitlist
+            Open AEGIS
+            <ArrowRight size={18} />
           </a>
-        </ScrollReveal>
-        <ScrollReveal delay={0.4}>
-          <p className="text-[0.875rem] text-white/50 mt-4">No spam. Unsubscribe anytime.</p>
         </ScrollReveal>
       </div>
     </section>

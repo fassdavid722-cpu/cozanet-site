@@ -6,8 +6,8 @@ const products = [
   {
     icon: <Shield size={24} className="text-coz-gold" />,
     title: 'AEGIS',
-    subtitle: 'Financial Operating System',
-    description: 'Wallets, payments, business finance, AI assistant, portfolio management, and cross-chain infrastructure.',
+    subtitle: 'Programmable Financial Infrastructure',
+    description: 'Smart-routing and settlement layer for digital assets, payments and financial applications.',
     link: { label: 'Explore AEGIS', href: '/aegis' },
     topBorder: '#6C2BD9',
   },

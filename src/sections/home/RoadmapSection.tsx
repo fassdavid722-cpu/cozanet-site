@@ -6,7 +6,7 @@ const milestones = [
   {
     quarter: 'Q1 2025',
     title: 'AEGIS Core Launch',
-    description: 'Financial Operating System with wallet infrastructure, payment processing, and business finance tools.',
+    description: 'Programmable financial infrastructure with wallet infrastructure, smart routing, and settlement orchestration.',
     status: 'Completed',
     statusColor: 'bg-green-50 text-green-700',
   },
@@ -19,8 +19,8 @@ const milestones = [
   },
   {
     quarter: 'Q3 2025',
-    title: 'Cross-Chain Bridge',
-    description: 'Seamless asset transfers across multiple blockchain networks with unified liquidity.',
+    title: 'Multi-Rail Settlement',
+    description: 'Multi-rail settlement architecture. BNB Smart Chain live, Stellar integration in progress.',
     status: 'Planned',
     statusColor: 'bg-coz-surface text-coz-slate',
   },

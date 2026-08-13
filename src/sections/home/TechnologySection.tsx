@@ -37,7 +37,7 @@ const pillars = [
     icon: <Link2 size={22} className="text-coz-link" />,
     bg: 'bg-blue-50',
     title: 'Blockchain Interoperability',
-    description: 'Cross-chain infrastructure that connects multiple blockchain networks through a unified abstraction layer.',
+    description: 'Multi-rail infrastructure that connects settlement rails through a unified smart-routing abstraction layer.',
   },
 ];
 

@@ -76,9 +76,9 @@ const securityPillars = [
 ];
 
 const roadmap = [
-  { q: 'Q1 2025', title: 'AEGIS Core Launch', desc: 'Wallet infrastructure, payment processing, and business finance tools.' },
+  { q: 'Q1 2025', title: 'AEGIS Core Launch', desc: 'Programmable financial infrastructure with wallet infrastructure, smart routing, and settlement orchestration.' },
   { q: 'Q2 2025', title: 'AI Financial Assistant', desc: 'Intelligent assistant for financial analysis and automated recommendations within AEGIS.' },
-  { q: 'Q3 2025', title: 'Cross-Chain Bridge', desc: 'Seamless asset transfers across multiple blockchain networks with unified liquidity.' },
+  { q: 'Q3 2025', title: 'Multi-Rail Settlement', desc: 'Multi-rail settlement architecture. BNB Smart Chain live, Stellar integration in progress.' },
   { q: 'Q4 2025', title: 'Developer Platform v2', desc: 'Enhanced APIs, new SDKs, webhook system, and developer dashboard.' },
   { q: 'Q1 2026', title: 'Enterprise Suite', desc: 'Compliance tools, advanced reporting, multi-entity management, white-label solutions.' },
   { q: 'Q2 2026', title: 'CZN Ecosystem', desc: 'Full token utility integration across all products, governance framework, ecosystem rewards.' },

@@ -11,10 +11,10 @@ const miniLayers = [
 ];
 
 const engines = [
-  { title: 'AEGIS Engine', desc: 'Financial operations engine handling wallets, payments, portfolio management, and business finance. Processes transactions with sub-second latency.', tags: ['Node.js', 'PostgreSQL', 'Redis', 'Solana'], color: '#6C2BD9' },
+  { title: 'AEGIS Engine', desc: 'Programmable financial infrastructure handling identity, wallet operations, smart routing, settlement orchestration, and payment infrastructure. Processes transactions with sub-second latency.', tags: ['Node.js', 'PostgreSQL', 'Redis', 'BNB Smart Chain'], color: '#6C2BD9' },
   { title: 'AI Engine', desc: 'Machine learning inference and training pipeline. Powers the financial assistant, recommendation systems, and intelligent automation.', tags: ['Python', 'PyTorch', 'Vector DB', 'GPU'], color: '#3B82F6' },
   { title: 'Automation Engine', desc: 'Workflow orchestration, event processing, and trigger-based automation. Handles millions of events per day with guaranteed delivery.', tags: ['Go', 'Kafka', 'Temporal', 'Elasticsearch'], color: '#10B981' },
-  { title: 'Blockchain Engine', desc: 'Multi-chain indexing, transaction relaying, and smart contract interaction. Supports Solana, Ethereum, and major L2 networks.', tags: ['Rust', 'gRPC', 'Web3', 'Custom Indexer'], color: '#FFB800' },
+  { title: 'Blockchain Engine', desc: 'Multi-rail indexing, transaction relaying, and smart contract interaction across supported settlement rails. BNB Smart Chain live; Stellar integration in progress.', tags: ['Rust', 'gRPC', 'Web3', 'Custom Indexer'], color: '#FFB800' },
 ];
 
 const infrastructure = [

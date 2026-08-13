@@ -46,7 +46,7 @@ function ContractAddressValue({ address }: { address: string }) {
 
 
 const utilities = [
-  { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts', desc: 'AEGIS routes every transaction to the best path automatically. Pay the resulting network and platform fees in CZN and receive automatic discounts — the more you use, the more you save.' },
+  { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts', desc: 'AEGIS routes supported transactions through appropriate settlement rails. Pay the resulting network and platform fees in CZN and receive automatic discounts — the more you use, the more you save.' },
   { icon: <Gift size={22} />, title: 'Platform Rewards', desc: 'Earn CZN rewards for active platform usage, referrals, and contributing to the ecosystem.' },
   { icon: <Layers size={22} />, title: 'Ecosystem Access', desc: 'Unlock premium features, priority processing, and exclusive tools across all Cozanet products.' },
   { icon: <Gavel size={22} />, title: 'Future Governance', desc: 'CZN will enable participation in ecosystem governance decisions as the platform matures.' },
@@ -100,7 +100,7 @@ export default function CznPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-body-lg text-coz-slate max-w-[640px] mt-6">
-              CZN is the native utility token of the Cozanet ecosystem. AEGIS is the smart router that finds and executes the best path for every transaction — CZN is the token used to pay and discount the fees AEGIS generates along the way, plus unlock platform access and ecosystem rewards. CZN does not route funds and derives its value from utility, not speculation.
+              CZN is the native utility token of the Cozanet ecosystem. AEGIS is the smart-routing layer that directs supported digital-asset transfers and settlement — CZN is the token used to pay and discount the fees AEGIS generates along the way, plus unlock platform access and ecosystem rewards. CZN does not route funds and derives its value from utility, not speculation.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>

@@ -20,12 +20,12 @@ export default function AegisHeroSection() {
           </motion.div>
 
           <motion.img
-            src="/brand-assets/aegis-shield.svg"
+            src="/brand-assets/aegis-mark.png"
             alt="AEGIS"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="w-28 h-28 object-contain mb-4"
+            className="h-24 w-auto object-contain mb-4"
           />
 
           <h1 className="text-display text-white mb-2">

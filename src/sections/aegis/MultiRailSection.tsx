@@ -37,7 +37,7 @@ export default function MultiRailSection() {
             {/* AEGIS node */}
             <div className="flex flex-col items-center">
               <div className="px-8 py-4 rounded-card bg-white/10 border border-white/20 text-center backdrop-blur-sm">
-                <img src="/brand-assets/aegis-shield.svg" alt="AEGIS" className="w-10 h-10 mx-auto mb-2" />
+                <img src="/brand-assets/aegis-mark-sm.png" alt="AEGIS" className="h-8 w-auto mx-auto mb-2 object-contain" />
                 <p className="text-h4 text-white">AEGIS</p>
                 <p className="text-[0.8125rem] text-coz-slate-light mt-1">Financial Infrastructure</p>
               </div>

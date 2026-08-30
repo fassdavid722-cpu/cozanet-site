@@ -12,10 +12,11 @@
  *
  *   AEGIS
  *     |
- *   Settlement Router
+ *   Smart Router
  *     |
- *     +-- BNB Provider         (live)
- *     +-- Stellar Provider     (integration_in_progress)
+ *     +-- BNB Provider           (live)
+ *     +-- Stellar Provider       (integration_in_progress)
+ *     +-- Circle Arc / USDC Provider (planned)
  *     +-- Future Payment Provider (planned)
  */
 
@@ -43,6 +44,13 @@ export const settlementRails: SettlementRail[] = [
     status: 'integration_in_progress',
     statusLabel: 'Integration in progress',
     description: 'AEGIS is being expanded to support Stellar as an additional settlement and payment rail, with an initial focus on stablecoin and payment infrastructure.',
+  },
+  {
+    name: 'Circle Arc / USDC',
+    shortName: 'Circle Arc',
+    status: 'planned',
+    statusLabel: 'Planned',
+    description: 'A regulated digital-dollar settlement and liquidity rail. Architecture-defined in AEGIS v3 as a hybrid-path and automatic-failover option alongside BNB Smart Chain and Stellar — not yet a live production flow.',
   },
   {
     name: 'Additional Payment Rails',

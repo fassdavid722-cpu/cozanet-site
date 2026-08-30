@@ -3,6 +3,7 @@ import AegisHeroSection from '../sections/aegis/AegisHeroSection';
 import AegisFeaturesSection from '../sections/aegis/AegisFeaturesSection';
 import MultiRailSection from '../sections/aegis/MultiRailSection';
 import StellarSection from '../sections/aegis/StellarSection';
+import CircleArcSection from '../sections/aegis/CircleArcSection';
 import AIAssistantSection from '../sections/aegis/AIAssistantSection';
 import AegisIntegrationSection from '../sections/aegis/AegisIntegrationSection';
 import AegisRoadmapSection from '../sections/aegis/AegisRoadmapSection';
@@ -22,6 +23,7 @@ export default function AegisPage() {
       <MultiRailSection />
       <div className="section-bridge-dark-light" />
       <StellarSection />
+      <CircleArcSection />
       <div className="section-bridge-light-dark" />
       <AIAssistantSection />
       <div className="section-bridge-dark-light" />

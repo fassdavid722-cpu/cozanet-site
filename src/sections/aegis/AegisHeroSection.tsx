@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen } from 'lucide-react';
+import { settlementRails } from '../../data/settlementRails';
 
 export default function AegisHeroSection() {
   const letters = 'AEGIS'.split('');
@@ -62,25 +63,36 @@ export default function AegisHeroSection() {
             orchestration and payment infrastructure into a unified financial operating layer.
           </motion.p>
 
-          {/* Status badges */}
+          {/* Status badges — data-driven from the single settlement-rails source of truth */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="flex flex-wrap gap-3 mt-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-pill bg-white/10 text-white text-[0.8125rem] backdrop-blur-sm border border-white/15">
-              <span className="w-2 h-2 rounded-full bg-green-400" />
-              BNB Smart Chain — Live
-            </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-pill bg-white/10 text-white text-[0.8125rem] backdrop-blur-sm border border-white/15">
-              <span className="w-2 h-2 rounded-full bg-coz-gold animate-pulse-dot" />
-              Stellar — Integration in progress
-            </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-pill bg-white/10 text-white/70 text-[0.8125rem] backdrop-blur-sm border border-white/10">
-              <span className="w-2 h-2 rounded-full bg-white/40" />
-              Additional Rails — Planned
-            </span>
+            {settlementRails.map((rail) => (
+              <span
+                key={rail.name}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-pill text-[0.8125rem] backdrop-blur-sm border ${
+                  rail.status === 'live'
+                    ? 'bg-white/10 text-white border-white/15'
+                    : rail.status === 'integration_in_progress'
+                    ? 'bg-white/10 text-white border-white/15'
+                    : 'bg-white/10 text-white/70 border-white/10'
+                }`}
+              >
+                <span
+                  className={`w-2 h-2 rounded-full ${
+                    rail.status === 'live'
+                      ? 'bg-green-400'
+                      : rail.status === 'integration_in_progress'
+                      ? 'bg-coz-gold animate-pulse-dot'
+                      : 'bg-white/40'
+                  }`}
+                />
+                {rail.name} — {rail.statusLabel}
+              </span>
+            ))}
           </motion.div>
 
           <motion.div

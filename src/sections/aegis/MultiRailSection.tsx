@@ -33,7 +33,7 @@ export default function MultiRailSection() {
 
         {/* Architecture Diagram */}
         <ScrollReveal delay={0.2} className="mt-20">
-          <div className="max-w-[680px] mx-auto">
+          <div className="max-w-[760px] mx-auto">
             {/* AEGIS node */}
             <div className="flex flex-col items-center">
               <div className="px-8 py-4 rounded-card bg-white/10 border border-white/20 text-center backdrop-blur-sm">
@@ -50,33 +50,28 @@ export default function MultiRailSection() {
                 <p className="text-[0.9375rem] font-medium text-coz-gold">Smart Routing</p>
               </div>
 
-              {/* Branching lines */}
-              <div className="relative w-full max-w-[560px] mt-0">
-                {/* Vertical line down from routing */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-0 w-px h-8 bg-coz-gold/40" />
-                {/* Horizontal line */}
-                <div className="absolute top-8 left-[16.67%] right-[16.67%] h-px bg-coz-gold/40" />
-                {/* Three vertical lines down to cards */}
-                <div className="absolute top-8 left-[16.67%] w-px h-8 bg-coz-gold/40" />
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 w-px h-8 bg-coz-gold/40" />
-                <div className="absolute top-8 right-[16.67%] w-px h-8 bg-coz-gold/40" />
-              </div>
+              {/* Vertical line down from routing, into a full-width horizontal bar */}
+              <div className="w-px h-8 bg-coz-gold/40" />
+              <div className="w-full h-px bg-coz-gold/40" />
 
-              {/* Three rail cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 w-full max-w-[560px] mt-16">
+              {/* Rail cards — connector tick rendered per-card so it always centers, regardless of count */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 w-full mt-0">
                 {settlementRails.map((rail) => {
                   const styles = statusStyles[rail.status];
                   return (
                     <ScrollReveal key={rail.name} delay={0.1}>
-                      <div className={`rounded-card p-5 border ${styles.border} bg-coz-charcoal text-center h-full flex flex-col justify-between`}>
-                        <div>
-                          <p className="text-[0.9375rem] font-medium text-white mb-1">{rail.name}</p>
-                          <p className="text-[0.75rem] text-coz-slate-light leading-relaxed mb-4">{rail.description}</p>
+                      <div className="flex flex-col items-center">
+                        <div className="w-px h-8 bg-coz-gold/40" />
+                        <div className={`rounded-card p-5 border ${styles.border} bg-coz-charcoal text-center h-full flex flex-col justify-between w-full`}>
+                          <div>
+                            <p className="text-[0.9375rem] font-medium text-white mb-1">{rail.name}</p>
+                            <p className="text-[0.75rem] text-coz-slate-light leading-relaxed mb-4">{rail.description}</p>
+                          </div>
+                          <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-[0.75rem] font-medium border ${styles.badge} self-center`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${styles.dot}`} />
+                            {rail.statusLabel}
+                          </span>
                         </div>
-                        <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-[0.75rem] font-medium border ${styles.badge}`}>
-                          <span className={`w-1.5 h-1.5 rounded-full ${styles.dot}`} />
-                          {rail.statusLabel}
-                        </span>
                       </div>
                     </ScrollReveal>
                   );

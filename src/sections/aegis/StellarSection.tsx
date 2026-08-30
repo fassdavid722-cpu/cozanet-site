@@ -83,6 +83,13 @@ export default function StellarSection() {
                   <span className="font-medium">Stellar</span> — Integration in progress, focused on stablecoin and payment settlement.
                 </p>
               </div>
+              {/* Planned */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-4 rounded-card bg-coz-surface border border-coz-border">
+                <span className="text-label text-coz-slate uppercase shrink-0 sm:w-28">Planned</span>
+                <p className="text-[1rem] text-coz-slate">
+                  <span className="font-medium text-coz-black">Circle Arc / USDC</span> — Architecture-defined regulated digital-dollar rail, not yet live in production.
+                </p>
+              </div>
               {/* Future */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-4 rounded-card bg-coz-surface border border-coz-border">
                 <span className="text-label text-coz-slate uppercase shrink-0 sm:w-28">Future</span>

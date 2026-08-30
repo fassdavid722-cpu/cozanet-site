@@ -11,7 +11,7 @@ const integrations = [
   {
     icon: <Route size={22} />,
     title: 'Multi-Rail Settlement',
-    desc: 'AEGIS routes supported transactions through appropriate settlement rails. BNB Smart Chain is live; Stellar integration is in progress; additional rails are planned.',
+    desc: 'AEGIS routes supported transactions through appropriate settlement rails. BNB Smart Chain is live; Stellar integration is in progress; Circle Arc / USDC is architecture-defined and planned; additional rails are planned.',
   },
   {
     icon: <Layers size={22} />,

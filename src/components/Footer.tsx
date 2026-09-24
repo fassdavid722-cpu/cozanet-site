@@ -13,7 +13,7 @@ function TelegramIcon({ size = 20 }: { size?: number }) {
 const socialLinks = [
   { Icon: Twitter, href: 'https://x.com/CozyCrypto_io', label: 'X (Twitter)' },
   { Icon: TelegramIcon, href: 'https://t.me/CozanetOfficial', label: 'Telegram' },
-  { Icon: Github, href: 'https://github.com/fassdavid722-cpu', label: 'GitHub' },
+  { Icon: Github, href: 'https://github.com/CozanetHQ', label: 'GitHub' },
 ];
 
 const footerLinks = {
@@ -30,7 +30,7 @@ const footerLinks = {
     { label: 'Whitepaper', href: '/whitepaper' },
     { label: 'API Reference', href: '/developers' },
     { label: 'SDKs', href: '/developers' },
-    { label: 'GitHub', href: 'https://github.com/fassdavid722-cpu', external: true },
+    { label: 'GitHub', href: 'https://github.com/CozanetHQ', external: true },
     { label: 'Status Page', href: '/documentation' },
   ],
   company: [

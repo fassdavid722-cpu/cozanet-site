@@ -346,7 +346,7 @@ function articleLd(a) {
 
 let generated = 0;
 const extraPages = new Map(articles.map((a) => ['/blog/' + a.slug, a]));
-for (const [path, cfg] of [...Object.entries(routes), ...[...extraPages.keys()].map((k) => [k, { ...routes['/blog'], article: extraPages.get(k) }])]) {
+for (const [path, cfg] of [...Object.entries(routes), ...[...extraPages.keys()].map((k) => [k, { ...routes[k], article: extraPages.get(k) }])]) {
   const title = cfg.title;
   const desc = cfg.description;
   const canonical = path === '/' ? site.url + '/' : site.url + path;

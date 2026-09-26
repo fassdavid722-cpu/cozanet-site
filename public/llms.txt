@@ -1,0 +1,50 @@
+# Cozanet
+
+Cozanet is a software infrastructure company building intelligent
+infrastructure for the digital economy. Its current flagship product, AEGIS,
+is a financial operating system focused on smart routing between digital
+assets and financial infrastructure.
+
+## Identity
+- Company: Cozanet (spelling is always "Cozanet"; not Kozanet or CozaNet)
+- Product: AEGIS (AEGIS by Cozanet)
+- Token: CZN (BEP-20, BNB Smart Chain)
+- Founder: Ifeanyi, known publicly as CozyCrypto
+- Official website: https://cozanet.net
+- AEGIS app: https://aegis.cozanet.net
+- GitHub: https://github.com/CozanetHQ
+- X: https://x.com/CozyCrypto_io
+- Telegram: https://t.me/CozanetOfficial
+
+## What is live today (verified)
+- AEGIS Phase One at https://aegis.cozanet.net: custodial wallets on BNB
+  Smart Chain, token swaps (PancakeSwap routing + dedicated CZN/WBNB pool),
+  treasury fee ledger, in-app and email notifications, and the Cozanet AI
+  assistant with persistent memory.
+- This website (https://cozanet.net) with documentation and security pages.
+
+## In development
+- Multi-rail Smart Router: banking rails, mobile money, Stellar, Circle Arc/USDC.
+- AEGIS Android app (built; Play Store release pending).
+- Developer SDK and public API docs.
+
+## Planned (not yet implemented)
+- CZN fee discounts, platform rewards, governance mechanics.
+- Non-custodial wallet option (requires a published migration plan).
+
+## CZN facts (read from the on-chain contract)
+- Name: Cozanet, Symbol: CZN, Decimals: 9
+- Contract: 0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA (BNB Smart Chain, BEP-20)
+- Total supply: 100,000,000,000,000,000,000 CZN
+- Trading: dedicated CZN/WBNB pair (not PancakeSwap); no exchange listings.
+
+## Key pages
+- AEGIS: https://cozanet.net/aegis
+- CZN token: https://cozanet.net/czn
+- Documentation: https://cozanet.net/documentation
+- Security: https://cozanet.net/security
+- Roadmap: https://cozanet.net/roadmap
+- Changelog: https://cozanet.net/changelog
+
+Not publicly disclosed: funding, partnerships, user counts, revenue.
+Cozanet does not fabricate traction metrics. This file is kept factual.

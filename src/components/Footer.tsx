@@ -27,17 +27,16 @@ const footerLinks = {
   ],
   resources: [
     { label: 'Documentation', href: '/documentation' },
+    { label: 'Roadmap', href: '/roadmap' },
+    { label: 'Changelog', href: '/changelog' },
     { label: 'Whitepaper', href: '/whitepaper' },
     { label: 'API Reference', href: '/developers' },
-    { label: 'SDKs', href: '/developers' },
     { label: 'GitHub', href: 'https://github.com/CozanetHQ', external: true },
-    { label: 'Status Page', href: '/documentation' },
   ],
   company: [
+    { label: 'About Cozanet', href: '/company' },
     { label: 'Mission & Vision', href: '/company' },
-    { label: 'Research', href: '/company' },
-    { label: 'Blog', href: '/company' },
-    { label: 'Careers', href: '/company' },
+    { label: 'Security', href: '/security' },
     { label: 'Contact', href: '/company' },
   ],
   legal: [

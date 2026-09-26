@@ -1,4 +1,3 @@
-import Seo from '../components/Seo';
 import AegisHeroSection from '../sections/aegis/AegisHeroSection';
 import AegisFeaturesSection from '../sections/aegis/AegisFeaturesSection';
 import MultiRailSection from '../sections/aegis/MultiRailSection';
@@ -12,10 +11,6 @@ import AegisCTASection from '../sections/aegis/AegisCTASection';
 export default function AegisPage() {
   return (
     <>
-      <Seo
-        title="AEGIS — Programmable Financial Infrastructure | Cozanet"
-        description="AEGIS is Cozanet's programmable financial infrastructure and smart-routing layer for digital-asset transfers, settlement and payment infrastructure."
-      />
       <AegisHeroSection />
       <div className="section-bridge-dark-light" />
       <AegisFeaturesSection />

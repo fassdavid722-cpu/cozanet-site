@@ -1,0 +1,89 @@
+{
+  "site": {
+    "name": "Cozanet",
+    "url": "https://cozanet.net",
+    "logo": "https://cozanet.net/brand-assets/favicon-512.png",
+    "sameAs": [
+      "https://x.com/CozyCrypto_io",
+      "https://t.me/CozanetOfficial",
+      "https://github.com/CozanetHQ"
+    ]
+  },
+  "routes": {
+    "/": {
+      "title": "Cozanet — Intelligent Infrastructure for the Digital Economy",
+      "description": "Cozanet builds software infrastructure for connecting digital assets, blockchain networks and financial systems, with AEGIS as its smart-routing financial operating system.",
+      "priority": 1.0
+    },
+    "/aegis": {
+      "title": "AEGIS by Cozanet — Smart Routing Financial Infrastructure",
+      "description": "AEGIS is Cozanet's financial operating system for connecting Web3 assets with traditional financial and payment infrastructure.",
+      "priority": 0.9
+    },
+    "/czn": {
+      "title": "CZN — Cozanet Token",
+      "description": "CZN is the native token associated with the Cozanet ecosystem, on BNB Smart Chain.",
+      "priority": 0.9
+    },
+    "/products": {
+      "title": "Products — Cozanet | AEGIS, AI, Automation, Developer Tools",
+      "description": "Cozanet's products: AEGIS financial operating system, Cozanet AI, workflow automation, and the developer platform.",
+      "priority": 0.8
+    },
+    "/technology": {
+      "title": "Technology — Cozanet | Gateway-First Microservices Architecture",
+      "description": "How Cozanet software is built: a unified gateway routing to isolated domain engines — authentication, rate limiting, and independent scaling per service.",
+      "priority": 0.7
+    },
+    "/developers": {
+      "title": "Developers — Cozanet | APIs, SDKs, and Integration",
+      "description": "Cozanet's gateway-first developer platform: APIs, SDKs, supported networks, and integration model for building on AEGIS infrastructure.",
+      "priority": 0.7
+    },
+    "/security": {
+      "title": "Security — Cozanet | Security Model and Architecture",
+      "description": "Cozanet's actual security model: authentication, wallet key management, transaction signing, permissions, known limitations, and responsible disclosure.",
+      "priority": 0.7
+    },
+    "/company": {
+      "title": "About Cozanet — Company, Mission, and Contact",
+      "description": "Cozanet is a software infrastructure company. Learn about the mission, the team, and how to contact Cozanet.",
+      "priority": 0.7
+    },
+    "/documentation": {
+      "title": "Documentation — Cozanet | AEGIS and Platform Docs",
+      "description": "Cozanet documentation: what AEGIS is, what is live today, what is in development, supported networks, wallet and smart-routing architecture.",
+      "priority": 0.8
+    },
+    "/roadmap": {
+      "title": "Roadmap — Cozanet | Live, In Development, Planned",
+      "description": "The Cozanet roadmap, separated into what is live today, what is in active development, and what is planned.",
+      "priority": 0.8
+    },
+    "/changelog": {
+      "title": "Changelog — Cozanet | Development Milestones",
+      "description": "A timestamped record of genuine Cozanet and AEGIS development milestones.",
+      "priority": 0.7
+    },
+    "/whitepaper": {
+      "title": "Whitepaper — Cozanet",
+      "description": "The Cozanet whitepaper: architecture, products, and the AEGIS smart-routing vision.",
+      "priority": 0.6
+    },
+    "/privacy": {
+      "title": "Privacy Policy — Cozanet",
+      "description": "How Cozanet handles personal data on cozanet.net and aegis.cozanet.net.",
+      "priority": 0.3
+    },
+    "/terms": {
+      "title": "Terms of Service — Cozanet",
+      "description": "Terms of service for Cozanet websites and services.",
+      "priority": 0.3
+    },
+    "/cookies": {
+      "title": "Cookie Policy — Cozanet",
+      "description": "Cookie usage on Cozanet websites.",
+      "priority": 0.3
+    }
+  }
+}

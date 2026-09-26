@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Seo from './components/Seo';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import AegisPage from './pages/AegisPage';
@@ -13,6 +14,8 @@ import SecurityPage from './pages/SecurityPage';
 import CompanyPage from './pages/CompanyPage';
 import WhitepaperPage from './pages/WhitepaperPage';
 import DocumentationPage from './pages/DocumentationPage';
+import ChangelogPage from './pages/ChangelogPage';
+import RoadmapPage from './pages/RoadmapPage';
 import NotFoundPage from './pages/NotFoundPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
@@ -30,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTopOnNavigate />
+      <Seo />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-1">
@@ -44,6 +48,8 @@ function App() {
             <Route path="/company" element={<CompanyPage />} />
             <Route path="/whitepaper" element={<WhitepaperPage />} />
             <Route path="/documentation" element={<DocumentationPage />} />
+            <Route path="/changelog" element={<ChangelogPage />} />
+            <Route path="/roadmap" element={<RoadmapPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="/cookies" element={<CookiePolicyPage />} />

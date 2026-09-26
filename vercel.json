@@ -1,3 +1,11 @@
 {
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/company", "permanent": true },
+    { "source": "/contact", "destination": "/company", "permanent": true },
+    { "source": "/docs", "destination": "/documentation", "permanent": true },
+    { "source": "/docs/:path*", "destination": "/documentation", "permanent": true },
+    { "source": "/czn/token", "destination": "/czn", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

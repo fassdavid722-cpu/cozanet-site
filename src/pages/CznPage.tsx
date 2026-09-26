@@ -46,10 +46,10 @@ function ContractAddressValue({ address }: { address: string }) {
 
 
 const utilities = [
-  { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts', desc: 'AEGIS routes supported transactions through appropriate settlement rails. Pay the resulting network and platform fees in CZN and receive automatic discounts — the more you use, the more you save.' },
-  { icon: <Gift size={22} />, title: 'Platform Rewards', desc: 'Earn CZN rewards for active platform usage, referrals, and contributing to the ecosystem.' },
-  { icon: <Layers size={22} />, title: 'Ecosystem Access', desc: 'Unlock premium features, priority processing, and exclusive tools across all Cozanet products.' },
-  { icon: <Gavel size={22} />, title: 'Future Governance', desc: 'CZN will enable participation in ecosystem governance decisions as the platform matures.' },
+  { icon: <Layers size={22} />, title: 'CZN Swaps in AEGIS — LIVE', desc: 'CZN can be swapped against the dedicated CZN/WBNB pair inside the AEGIS app today. This is the only CZN mechanic currently implemented.' },
+  { icon: <Tag size={22} />, title: 'AEGIS Fee Discounts — PLANNED', desc: 'A design goal: paying AEGIS network and platform fees in CZN at a discount. Not yet implemented.' },
+  { icon: <Gift size={22} />, title: 'Platform Rewards — PLANNED', desc: 'A design goal: CZN rewards for platform usage, referrals, and ecosystem contribution. Not yet implemented.' },
+  { icon: <Gavel size={22} />, title: 'Governance — PLANNED', desc: 'CZN may enable participation in ecosystem governance decisions as the platform matures. Not yet implemented.' },
 ];
 
 const tokenSpecs = [
@@ -57,7 +57,7 @@ const tokenSpecs = [
   { label: 'Token Symbol', value: 'CZN' },
   { label: 'Token Standard', value: 'BEP-20 (BSC)' },
   { label: 'Total Supply', value: '100,000,000,000,000,000,000 CZN' },
-  { label: 'Target Supply (Post-Burn)', value: '400,000,000 CZN' },
+  { label: 'Target Supply (Planned Post-Burn)', value: '400,000,000 CZN (planned, not yet executed)' },
   { label: 'Decimals', value: '9' },
   { label: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
   { label: 'Contract Address', value: '0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA' },
@@ -74,7 +74,7 @@ const distribution = [
 const complianceItems = [
   { icon: <Scale size={20} />, title: 'No Investment Advice', desc: 'Cozanet does not provide investment, financial, or legal advice. CZN is a utility token, not a security.', bg: 'bg-green-50' },
   { icon: <FileCheck size={20} />, title: 'Regulatory Compliance', desc: 'We actively monitor and adapt to regulatory developments in all jurisdictions where we operate.', bg: 'bg-blue-50' },
-  { icon: <Eye size={20} />, title: 'Transparency Reports', desc: 'We publish regular transparency reports detailing token movements, treasury status, and ecosystem metrics.', bg: 'bg-coz-gold-light' },
+  { icon: <Eye size={20} />, title: 'Public Development Record', desc: 'Instead of periodic reports, Cozanet maintains a public, timestamped changelog of what has actually shipped, and a roadmap separating live features from planned ones.', bg: 'bg-coz-gold-light' },
   { icon: <ShieldCheck size={20} />, title: 'Anti-Manipulation', desc: 'We do not engage in price manipulation, artificial volume creation, or misleading marketing practices.', bg: 'bg-purple-50' },
 ];
 
@@ -107,6 +107,11 @@ export default function CznPage() {
             <div className="mt-6 p-5 rounded-xl bg-coz-surface border-l-[3px] border-coz-gold max-w-[600px]">
               <p className="text-[0.875rem] text-coz-slate">
                 CZN is a utility token. It is not an investment, security, or financial instrument. Token value may fluctuate. Never invest more than you can afford to lose.
+              </p>
+            </div>
+            <div className="mt-4 p-5 rounded-xl bg-coz-surface border-l-[3px] border-coz-slate max-w-[600px]">
+              <p className="text-[0.875rem] text-coz-slate">
+                <strong>Trading status:</strong> CZN trades against a dedicated CZN/WBNB pair contract (not a PancakeSwap pool) via the AEGIS app. CZN is not listed on any exchange, and pool liquidity is currently small. Cozanet does not publish holder counts, market capitalization, or volume figures it cannot verify from reliable sources.
               </p>
             </div>
           </ScrollReveal>

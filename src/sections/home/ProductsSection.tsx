@@ -7,7 +7,7 @@ const products = [
     icon: <Shield size={24} className="text-coz-gold" />,
     title: 'AEGIS',
     subtitle: 'Programmable Financial Infrastructure',
-    description: 'Smart-routing and settlement layer for digital assets, payments and financial applications.',
+    description: 'A financial operating system moving money across Africa’s crypto, bank, and mobile money rails — a smart-routing and settlement layer for digital assets, payments and financial applications.',
     link: { label: 'Explore AEGIS', href: '/aegis' },
     topBorder: '#6C2BD9',
   },

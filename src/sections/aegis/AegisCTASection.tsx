@@ -10,8 +10,9 @@ export default function AegisCTASection() {
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <p className="text-body-lg text-white/80 mt-4 max-w-[600px] mx-auto">
-            Programmable financial infrastructure and smart-routing layer for digital-asset
-            transfers and settlement. Built by Cozanet.
+            AEGIS is a financial operating system moving money across Africa’s crypto, bank, and mobile
+            money rails — programmable financial infrastructure and smart-routing layer for digital-asset transfers
+            and settlement. Built by Cozanet.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>

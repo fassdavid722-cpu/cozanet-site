@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T14:23:44Z",
+ "generated": "2026-09-26T14:39:21Z",
  "scanner_version": "1.0",
  "health": {
   "cozanet.net": {
@@ -7,8 +7,8 @@
    "up": true,
    "https": true,
    "status": 200,
-   "latency_ms": 120,
-   "checked": "2026-09-26T14:23:44Z",
+   "latency_ms": 139,
+   "checked": "2026-09-26T14:39:21Z",
    "state": "VERIFIED"
   },
   "aegis.cozanet.net (AEGIS app)": {
@@ -16,8 +16,8 @@
    "up": true,
    "https": true,
    "status": 200,
-   "latency_ms": 114,
-   "checked": "2026-09-26T14:23:44Z",
+   "latency_ms": 205,
+   "checked": "2026-09-26T14:39:21Z",
    "state": "VERIFIED"
   }
  },
@@ -26,7 +26,7 @@
    "state": "VERIFIED",
    "detail": "contains Sitemap directive",
    "source": "cozanet.net",
-   "checked": "2026-09-26T14:23:44Z"
+   "checked": "2026-09-26T14:39:21Z"
   },
   "sitemap.xml": {
    "state": "VERIFIED",
@@ -45,16 +45,22 @@
     "https://cozanet.net/whitepaper",
     "https://cozanet.net/privacy",
     "https://cozanet.net/terms",
-    "https://cozanet.net/cookies"
+    "https://cozanet.net/cookies",
+    "https://cozanet.net/blog",
+    "https://cozanet.net/blog/what-is-cozanet",
+    "https://cozanet.net/blog/aegis-smart-routing",
+    "https://cozanet.net/blog/cross-border-settlement-africa",
+    "https://cozanet.net/blog/cozanet-web3-financial-infrastructure",
+    "https://cozanet.net/blog/building-aegis-architecture-wallets-roadmap"
    ],
-   "count": 15,
+   "count": 21,
    "source": "cozanet.net",
-   "checked": "2026-09-26T14:23:44Z"
+   "checked": "2026-09-26T14:39:21Z"
   },
   "llms.txt": {
    "state": "VERIFIED",
    "source": "cozanet.net",
-   "checked": "2026-09-26T14:23:44Z"
+   "checked": "2026-09-26T14:39:21Z"
   }
  },
  "pages": [
@@ -66,7 +72,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 109
+   "latency_ms": 105
   },
   {
    "page": "/aegis",
@@ -76,7 +82,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 104
+   "latency_ms": 142
   },
   {
    "page": "/czn",
@@ -86,7 +92,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 107
+   "latency_ms": 114
   },
   {
    "page": "/products",
@@ -96,7 +102,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 100
+   "latency_ms": 126
   },
   {
    "page": "/technology",
@@ -106,7 +112,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 102
+   "latency_ms": 142
   },
   {
    "page": "/developers",
@@ -116,7 +122,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 106
+   "latency_ms": 128
   },
   {
    "page": "/security",
@@ -126,7 +132,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 102
+   "latency_ms": 144
   },
   {
    "page": "/company",
@@ -136,7 +142,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 107
+   "latency_ms": 122
   },
   {
    "page": "/documentation",
@@ -146,7 +152,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 122
+   "latency_ms": 132
   },
   {
    "page": "/roadmap",
@@ -156,7 +162,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 106
+   "latency_ms": 129
   },
   {
    "page": "/changelog",
@@ -166,7 +172,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 110
+   "latency_ms": 127
   },
   {
    "page": "/whitepaper",
@@ -176,7 +182,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 105
+   "latency_ms": 138
   },
   {
    "page": "/privacy",
@@ -186,7 +192,7 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 111
+   "latency_ms": 127
   },
   {
    "page": "/terms",
@@ -196,13 +202,73 @@
    "canonical": true,
    "og": true,
    "jsonld": true,
-   "latency_ms": 116
+   "latency_ms": 152
   },
   {
    "page": "/cookies",
    "http": 200,
    "indexable": true,
    "title": "Cookie Policy \u2014 Cozanet",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 130
+  },
+  {
+   "page": "/blog",
+   "http": 200,
+   "indexable": true,
+   "title": "Blog \u2014 Cozanet | Technical Articles on Financial Infrastructure",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 106
+  },
+  {
+   "page": "/blog/what-is-cozanet",
+   "http": 200,
+   "indexable": true,
+   "title": "What Is Cozanet? \u2014 Cozanet Blog",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 118
+  },
+  {
+   "page": "/blog/aegis-smart-routing",
+   "http": 200,
+   "indexable": true,
+   "title": "What Is AEGIS and How Does Smart Routing Work? \u2014 Cozanet Blog",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 102
+  },
+  {
+   "page": "/blog/cross-border-settlement-africa",
+   "http": 200,
+   "indexable": true,
+   "title": "Why Cross-Border Settlement Is Difficult in African Markets \u2014 Cozanet Blog",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 111
+  },
+  {
+   "page": "/blog/cozanet-web3-financial-infrastructure",
+   "http": 200,
+   "indexable": true,
+   "title": "Cozanet's Approach to Web3-to-Financial Infrastructure \u2014 Cozanet Blog",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 109
+  },
+  {
+   "page": "/blog/building-aegis-architecture-wallets-roadmap",
+   "http": 200,
+   "indexable": true,
+   "title": "Building AEGIS: Architecture, Wallets and Roadmap \u2014 Cozanet Blog",
    "canonical": true,
    "og": true,
    "jsonld": true,
@@ -213,7 +279,7 @@
  "czn": {
   "contract": "0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA",
   "source": "BSC public RPC (https://bsc-dataseed.binance.org/)",
-  "checked": "2026-09-26T14:23:44Z",
+  "checked": "2026-09-26T14:39:21Z",
   "name": "Cozanet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
   "symbol": "CZN\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
   "decimals": 9,
@@ -238,19 +304,19 @@
    "url": "https://x.com/CozyCrypto_io",
    "http": 200,
    "state": "FOUND",
-   "checked": "2026-09-26T14:23:44Z"
+   "checked": "2026-09-26T14:39:21Z"
   },
   "Telegram": {
    "url": "https://t.me/CozanetOfficial",
    "http": 200,
    "state": "FOUND",
-   "checked": "2026-09-26T14:23:44Z"
+   "checked": "2026-09-26T14:39:21Z"
   },
   "GitHub org": {
    "url": "https://github.com/CozanetHQ",
    "http": 200,
    "state": "FOUND",
-   "checked": "2026-09-26T14:23:44Z",
+   "checked": "2026-09-26T14:39:21Z",
    "public_repos": [
     "aegis-developer-sdk",
     "apex-motors-site",
@@ -349,12 +415,22 @@
    }
   }
  },
+ "manual_findings": {
+  "bscscan_czn_contract": {
+   "finding": "CZN contract source code is VERIFIED on BscScan (exact match, contract name Cozanet, compiler v0.8.30)",
+   "source": "BscScan token/contract page, checked via live browser 2026-09-26",
+   "url": "https://bscscan.com/token/0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA",
+   "holders": 9,
+   "status": "VERIFIED",
+   "checked": "2026-09-26"
+  }
+ },
  "change_since_last_scan": [
   {
-   "since": "2026-09-26T14:21:49Z",
-   "pages_indexable": "15 -> 15",
-   "pages_with_jsonld": "15 -> 15",
-   "sitemap_urls": "15 -> 15",
+   "since": "2026-09-26T14:23:44Z",
+   "pages_indexable": "15 -> 21",
+   "pages_with_jsonld": "15 -> 21",
+   "sitemap_urls": "15 -> 21",
    "site_up": "True -> True",
    "czn_pool_reserve_czn": "24.480047809 -> 24.480047809"
   }

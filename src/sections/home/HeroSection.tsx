@@ -127,7 +127,7 @@ export default function HeroSection() {
     };
   }, []);
 
-  const headlineWords = 'Intelligent infrastructure for the digital economy'.split(' ');
+  const headlineWords = 'Intelligent financial infrastructure for Africa'.split(' ');
 
   return (
     <section className="relative min-h-[100dvh] bg-coz-black pt-[72px] overflow-hidden">
@@ -157,7 +157,7 @@ export default function HeroSection() {
               className="inline-block mb-6"
             >
               <span className="text-[0.75rem] font-medium tracking-[0.04em] px-4 py-2 rounded-pill bg-coz-gold-light text-coz-gold-dark">
-                Global Technology Company
+                Pan-African Financial Infrastructure
               </span>
             </motion.div>
 
@@ -185,7 +185,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-body-lg text-coz-slate-light max-w-[540px]"
             >
-              Cozanet builds the products, platforms, and protocols that power intelligent software, financial infrastructure, and automation across the global digital economy.
+              Cozanet builds AEGIS, a financial operating system that moves money across Africa — between crypto, banks, and mobile money — routed automatically through whichever rail is cheapest or fastest. We're not building one app; we're building the money rails a continent still doesn't have.
             </motion.p>
 
             <motion.div

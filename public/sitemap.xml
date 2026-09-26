@@ -15,4 +15,10 @@
   <url><loc>https://cozanet.net/privacy</loc><lastmod>2026-09-26</lastmod><priority>0.3</priority></url>
   <url><loc>https://cozanet.net/terms</loc><lastmod>2026-09-26</lastmod><priority>0.3</priority></url>
   <url><loc>https://cozanet.net/cookies</loc><lastmod>2026-09-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://cozanet.net/blog</loc><lastmod>2026-09-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://cozanet.net/blog/what-is-cozanet</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://cozanet.net/blog/aegis-smart-routing</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://cozanet.net/blog/cross-border-settlement-africa</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://cozanet.net/blog/cozanet-web3-financial-infrastructure</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://cozanet.net/blog/building-aegis-architecture-wallets-roadmap</loc><lastmod>2026-09-26</lastmod><priority>0.6</priority></url>
 </urlset>

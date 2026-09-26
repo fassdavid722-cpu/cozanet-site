@@ -84,6 +84,36 @@
       "title": "Cookie Policy — Cozanet",
       "description": "Cookie usage on Cozanet websites.",
       "priority": 0.3
+    },
+    "/blog": {
+      "title": "Blog — Cozanet | Technical Articles on Financial Infrastructure",
+      "description": "Technical articles from Cozanet: smart routing, cross-border settlement, Web3-to-financial infrastructure, and building AEGIS.",
+      "priority": 0.8
+    },
+    "/blog/what-is-cozanet": {
+      "title": "What Is Cozanet? — Cozanet Blog",
+      "description": "A factual introduction to Cozanet: what the company builds, what is live today, what is in development, and what is only planned.",
+      "priority": 0.6
+    },
+    "/blog/aegis-smart-routing": {
+      "title": "What Is AEGIS and How Does Smart Routing Work? — Cozanet Blog",
+      "description": "AEGIS is Cozanet's financial operating system. This article explains what is live today and how smart routing between crypto, bank, and mobile money rails is",
+      "priority": 0.6
+    },
+    "/blog/cross-border-settlement-africa": {
+      "title": "Why Cross-Border Settlement Is Difficult in African Markets — Cozanet Blog",
+      "description": "Fragmented rails, expensive remittances, currency volatility, and infrastructure gaps: the real reasons cross-border settlement across African markets is har",
+      "priority": 0.6
+    },
+    "/blog/cozanet-web3-financial-infrastructure": {
+      "title": "Cozanet's Approach to Web3-to-Financial Infrastructure — Cozanet Blog",
+      "description": "How Cozanet connects Web3 assets to traditional financial rails: custodial wallets today, a multi-rail Smart Router in development, and an architecture built",
+      "priority": 0.6
+    },
+    "/blog/building-aegis-architecture-wallets-roadmap": {
+      "title": "Building AEGIS: Architecture, Wallets and Roadmap — Cozanet Blog",
+      "description": "An engineering view of AEGIS: gateway-first microservices, custodial wallet derivation, audit logging, and a roadmap separated into live, in-development, and",
+      "priority": 0.6
     }
   }
 }

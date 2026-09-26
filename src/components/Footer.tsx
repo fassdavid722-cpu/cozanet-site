@@ -29,6 +29,7 @@ const footerLinks = {
     { label: 'Documentation', href: '/documentation' },
     { label: 'Roadmap', href: '/roadmap' },
     { label: 'Changelog', href: '/changelog' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Whitepaper', href: '/whitepaper' },
     { label: 'API Reference', href: '/developers' },
     { label: 'GitHub', href: 'https://github.com/CozanetHQ', external: true },

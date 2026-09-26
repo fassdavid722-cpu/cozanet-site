@@ -24,6 +24,7 @@ import { resolve } from 'node:path';
 
 const root = process.cwd();
 const manifest = JSON.parse(readFileSync(resolve(root, 'scripts/seo-manifest.json'), 'utf8'));
+const articles = JSON.parse(readFileSync(resolve(root, 'src/content/articles.json'), 'utf8')).articles;
 const { site, routes } = manifest;
 
 // ---------- route-specific crawler-visible content (inside <noscript>) ----------
@@ -86,6 +87,7 @@ const CONTENT = {
       <li><strong>Blockchain:</strong> BNB Smart Chain (BEP-20)</li>
       <li><strong>Contract address:</strong> 0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA</li>
       <li><strong>Trading pool:</strong> a dedicated CZN/WBNB pair contract (0xdf75...a4c0d) — NOT a PancakeSwap pool. The AEGIS app executes CZN↔BNB swaps against this pair. Current pool liquidity is small; CZN has no exchange listings.</li>
+      <li><strong>Verified contract page:</strong> <a href="https://bscscan.com/token/0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA">bscscan.com/token/0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA</a> — source code verified on BscScan (exact match).</li>
     </ul>
     <h2>Token mechanics — status</h2>
     <ul>
@@ -241,6 +243,19 @@ const CONTENT = {
     </ul>
     <p>Current status of everything: ${a('/roadmap', 'the roadmap')}. ${a('/aegis', 'Explore AEGIS')}.</p>`,
 
+  '/blog': `
+    <span class="pill">Cozanet Blog</span>
+    <h1>Technical articles</h1>
+    <p>Writing about financial infrastructure, smart routing, and building AEGIS. Every article states what is live, in development, or planned.</p>
+    <ul>
+      <li><a href="/blog/what-is-cozanet">What Is Cozanet?</a> — a factual introduction to the company, its products, and its honesty policy.</li>
+      <li><a href="/blog/aegis-smart-routing">What Is AEGIS and How Does Smart Routing Work?</a> — Phase One today, and the routing layer being built.</li>
+      <li><a href="/blog/cross-border-settlement-africa">Why Cross-Border Settlement Is Difficult in African Markets</a> — fragmented rails, remittance costs, and currency volatility.</li>
+      <li><a href="/blog/cozanet-web3-financial-infrastructure">Cozanet's Approach to Web3-to-Financial Infrastructure</a> — connecting blockchain rails to banking and mobile money.</li>
+      <li><a href="/blog/building-aegis-architecture-wallets-roadmap">Building AEGIS: Architecture, Wallets and Roadmap</a> — an engineering view of the system.</li>
+    </ul>
+    <p>More: <a href="/roadmap">roadmap</a> and <a href="/changelog">changelog</a>.</p>`,
+
   '/whitepaper': `
     <span class="pill">Cozanet Whitepaper</span>
     <h1>Whitepaper — Cozanet</h1>
@@ -316,15 +331,34 @@ const prerenderCss = `<style>
       #__prerender ul { color:#b7b7bd; line-height:1.8; padding-left:1.2rem; }
     </style>`;
 
+function articleLd(a) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: a.title,
+    description: a.description,
+    datePublished: a.date,
+    author: { '@type': 'Organization', name: 'Cozanet', url: site.url },
+    publisher: { '@type': 'Organization', name: 'Cozanet', url: site.url, logo: { '@type': 'ImageObject', url: site.logo } },
+    mainEntityOfPage: site.url + '/blog/' + a.slug,
+  };
+}
+
 let generated = 0;
-for (const [path, cfg] of Object.entries(routes)) {
+const extraPages = new Map(articles.map((a) => ['/blog/' + a.slug, a]));
+for (const [path, cfg] of [...Object.entries(routes), ...[...extraPages.keys()].map((k) => [k, { ...routes['/blog'], article: extraPages.get(k) }])]) {
   const title = cfg.title;
   const desc = cfg.description;
   const canonical = path === '/' ? site.url + '/' : site.url + path;
   const jsonLd = [orgLd, siteLd, breadcrumbLd(path, title)];
+  if (cfg.article) jsonLd.push(articleLd(cfg.article));
   if (path === '/aegis') jsonLd.push(aegisLd);
 
-  const body = wrap(title, CONTENT[path] || `<h1>${esc(title)}</h1><p>${esc(desc)}</p>`);
+  const body = cfg.article
+    ? wrap(cfg.article.title, `<p class="muted" style="color:#8a8a92;font-size:.85rem">Blog · ${cfg.article.date}</p>
+      <h1>${esc(cfg.article.title)}</h1><p>${esc(cfg.article.description)}</p>${cfg.article.html}
+      <p>More: <a href="/roadmap">roadmap</a>, <a href="/changelog">changelog</a>, <a href="/aegis">AEGIS</a>.</p>`)
+    : wrap(title, CONTENT[path] || `<h1>${esc(title)}</h1><p>${esc(desc)}</p>`);
 
   const html = `<!doctype html>
 <html lang="en">

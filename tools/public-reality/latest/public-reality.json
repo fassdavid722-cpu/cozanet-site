@@ -1,0 +1,362 @@
+{
+ "generated": "2026-09-26T14:23:44Z",
+ "scanner_version": "1.0",
+ "health": {
+  "cozanet.net": {
+   "url": "https://cozanet.net",
+   "up": true,
+   "https": true,
+   "status": 200,
+   "latency_ms": 120,
+   "checked": "2026-09-26T14:23:44Z",
+   "state": "VERIFIED"
+  },
+  "aegis.cozanet.net (AEGIS app)": {
+   "url": "https://aegis.cozanet.net",
+   "up": true,
+   "https": true,
+   "status": 200,
+   "latency_ms": 114,
+   "checked": "2026-09-26T14:23:44Z",
+   "state": "VERIFIED"
+  }
+ },
+ "surfaces": {
+  "robots.txt": {
+   "state": "VERIFIED",
+   "detail": "contains Sitemap directive",
+   "source": "cozanet.net",
+   "checked": "2026-09-26T14:23:44Z"
+  },
+  "sitemap.xml": {
+   "state": "VERIFIED",
+   "urls": [
+    "https://cozanet.net/",
+    "https://cozanet.net/aegis",
+    "https://cozanet.net/czn",
+    "https://cozanet.net/products",
+    "https://cozanet.net/technology",
+    "https://cozanet.net/developers",
+    "https://cozanet.net/security",
+    "https://cozanet.net/company",
+    "https://cozanet.net/documentation",
+    "https://cozanet.net/roadmap",
+    "https://cozanet.net/changelog",
+    "https://cozanet.net/whitepaper",
+    "https://cozanet.net/privacy",
+    "https://cozanet.net/terms",
+    "https://cozanet.net/cookies"
+   ],
+   "count": 15,
+   "source": "cozanet.net",
+   "checked": "2026-09-26T14:23:44Z"
+  },
+  "llms.txt": {
+   "state": "VERIFIED",
+   "source": "cozanet.net",
+   "checked": "2026-09-26T14:23:44Z"
+  }
+ },
+ "pages": [
+  {
+   "page": "/",
+   "http": 200,
+   "indexable": true,
+   "title": "Cozanet \u2014 Intelligent Infrastructure for the Digital Economy",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 109
+  },
+  {
+   "page": "/aegis",
+   "http": 200,
+   "indexable": true,
+   "title": "AEGIS by Cozanet \u2014 Smart Routing Financial Infrastructure",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 104
+  },
+  {
+   "page": "/czn",
+   "http": 200,
+   "indexable": true,
+   "title": "CZN \u2014 Cozanet Token",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 107
+  },
+  {
+   "page": "/products",
+   "http": 200,
+   "indexable": true,
+   "title": "Products \u2014 Cozanet | AEGIS, AI, Automation, Developer Tools",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 100
+  },
+  {
+   "page": "/technology",
+   "http": 200,
+   "indexable": true,
+   "title": "Technology \u2014 Cozanet | Gateway-First Microservices Architecture",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 102
+  },
+  {
+   "page": "/developers",
+   "http": 200,
+   "indexable": true,
+   "title": "Developers \u2014 Cozanet | APIs, SDKs, and Integration",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 106
+  },
+  {
+   "page": "/security",
+   "http": 200,
+   "indexable": true,
+   "title": "Security \u2014 Cozanet | Security Model and Architecture",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 102
+  },
+  {
+   "page": "/company",
+   "http": 200,
+   "indexable": true,
+   "title": "About Cozanet \u2014 Company, Mission, and Contact",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 107
+  },
+  {
+   "page": "/documentation",
+   "http": 200,
+   "indexable": true,
+   "title": "Documentation \u2014 Cozanet | AEGIS and Platform Docs",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 122
+  },
+  {
+   "page": "/roadmap",
+   "http": 200,
+   "indexable": true,
+   "title": "Roadmap \u2014 Cozanet | Live, In Development, Planned",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 106
+  },
+  {
+   "page": "/changelog",
+   "http": 200,
+   "indexable": true,
+   "title": "Changelog \u2014 Cozanet | Development Milestones",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 110
+  },
+  {
+   "page": "/whitepaper",
+   "http": 200,
+   "indexable": true,
+   "title": "Whitepaper \u2014 Cozanet",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 105
+  },
+  {
+   "page": "/privacy",
+   "http": 200,
+   "indexable": true,
+   "title": "Privacy Policy \u2014 Cozanet",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 111
+  },
+  {
+   "page": "/terms",
+   "http": 200,
+   "indexable": true,
+   "title": "Terms of Service \u2014 Cozanet",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 116
+  },
+  {
+   "page": "/cookies",
+   "http": 200,
+   "indexable": true,
+   "title": "Cookie Policy \u2014 Cozanet",
+   "canonical": true,
+   "og": true,
+   "jsonld": true,
+   "latency_ms": 102
+  }
+ ],
+ "duplicate_titles": {},
+ "czn": {
+  "contract": "0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA",
+  "source": "BSC public RPC (https://bsc-dataseed.binance.org/)",
+  "checked": "2026-09-26T14:23:44Z",
+  "name": "Cozanet\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "symbol": "CZN\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "decimals": 9,
+  "total_supply_raw": 99999999999999999999779400830,
+  "total_supply": 1e+20,
+  "pool": {
+   "address": "0xdf7576158840899eeab2081fd0ed46e3428a4c0d",
+   "pair": "CZN/WBNB",
+   "reserve_wbnb": 0.0819989269324855,
+   "reserve_czn": 24.480047809
+  },
+  "state": "VERIFIED",
+  "unavailable": [
+   "holder count",
+   "market cap",
+   "volume",
+   "exchange listings (none verified)"
+  ]
+ },
+ "socials": {
+  "X (Twitter)": {
+   "url": "https://x.com/CozyCrypto_io",
+   "http": 200,
+   "state": "FOUND",
+   "checked": "2026-09-26T14:23:44Z"
+  },
+  "Telegram": {
+   "url": "https://t.me/CozanetOfficial",
+   "http": 200,
+   "state": "FOUND",
+   "checked": "2026-09-26T14:23:44Z"
+  },
+  "GitHub org": {
+   "url": "https://github.com/CozanetHQ",
+   "http": 200,
+   "state": "FOUND",
+   "checked": "2026-09-26T14:23:44Z",
+   "public_repos": [
+    "aegis-developer-sdk",
+    "apex-motors-site",
+    "near-scalper-bot",
+    "hyperliquid-research",
+    "aegis-docs",
+    ".github"
+   ]
+  }
+ },
+ "search": {
+  "queries": {
+   "Cozanet": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "Page 1 dominated by unrelated French namesakes (aesthetic-medicine Dr, authors, athletes, a French company registry). No Cozanet (company) result."
+   },
+   "Cozanet Technologies": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result; unrelated results only."
+   },
+   "Cozanet AEGIS": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result; unrelated academic results."
+   },
+   "Cozanet CZN": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result. CZN searches are dominated by the game 'Chaos Zero Nightmare'."
+   },
+   "CZN token Cozanet": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result; CZN game token results dominate."
+   },
+   "AEGIS Cozanet": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result; unrelated 'Cozannet' (one n) researchers dominate."
+   },
+   "CozyCrypto Cozanet": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": true,
+    "url": "https://cozanet.net/author/CozyCrypto/",
+    "notes": "cozanet.net IS indexed (legacy /author/CozyCrypto/ URL from the previous WordPress site)."
+   },
+   "Cozanet smart routing": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result."
+   },
+   "Cozanet Web3": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result."
+   },
+   "Cozanet Africa": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "Results not captured during baseline run (truncated) - treat as not checked."
+   },
+   "Cozanet financial operating system": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result. One unrelated 1910 academic citation by a different Cozanet."
+   },
+   "Cozanet blockchain infrastructure": {
+    "engine": "Google (via web search)",
+    "checked": "2026-09-26T14:23:44Z",
+    "cozanet_found": false,
+    "url": null,
+    "notes": "No Cozanet result."
+   }
+  }
+ },
+ "change_since_last_scan": [
+  {
+   "since": "2026-09-26T14:21:49Z",
+   "pages_indexable": "15 -> 15",
+   "pages_with_jsonld": "15 -> 15",
+   "sitemap_urls": "15 -> 15",
+   "site_up": "True -> True",
+   "czn_pool_reserve_czn": "24.480047809 -> 24.480047809"
+  }
+ ]
+}

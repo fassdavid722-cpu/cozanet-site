@@ -37,6 +37,8 @@ assets and financial infrastructure.
 - Contract: 0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA (BNB Smart Chain, BEP-20)
 - Total supply: 100,000,000,000,000,000,000 CZN
 - Trading: dedicated CZN/WBNB pair (not PancakeSwap); no exchange listings.
+- Contract source code: verified on BscScan (exact match)
+- Verified contract page: https://bscscan.com/token/0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA
 
 ## Key pages
 - AEGIS: https://cozanet.net/aegis
@@ -45,6 +47,7 @@ assets and financial infrastructure.
 - Security: https://cozanet.net/security
 - Roadmap: https://cozanet.net/roadmap
 - Changelog: https://cozanet.net/changelog
+- Blog: https://cozanet.net/blog
 
 Not publicly disclosed: funding, partnerships, user counts, revenue.
 Cozanet does not fabricate traction metrics. This file is kept factual.

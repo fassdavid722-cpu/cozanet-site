@@ -1,0 +1,10 @@
+{
+  "bscscan_czn_contract": {
+    "finding": "CZN contract source code is VERIFIED on BscScan (exact match, contract name Cozanet, compiler v0.8.30)",
+    "source": "BscScan token/contract page, checked via live browser 2026-09-26",
+    "url": "https://bscscan.com/token/0xE470E53147E199E6a6C02a50473fF8E84bD2d2CA",
+    "holders": 9,
+    "status": "VERIFIED",
+    "checked": "2026-09-26"
+  }
+}

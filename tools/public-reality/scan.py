@@ -171,6 +171,9 @@ if prev_path.exists():
 search_path = latest_dir / "search-results.json"
 if search_path.exists():
     report["search"] = json.loads(search_path.read_text())
+manual_path = latest_dir / "manual-findings.json"
+if manual_path.exists():
+    report["manual_findings"] = json.loads(manual_path.read_text())
 report["change_since_last_scan"] = history
 prev_path.write_text(json.dumps(report, indent=1))
 

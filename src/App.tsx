@@ -15,6 +15,8 @@ import CompanyPage from './pages/CompanyPage';
 import WhitepaperPage from './pages/WhitepaperPage';
 import DocumentationPage from './pages/DocumentationPage';
 import ChangelogPage from './pages/ChangelogPage';
+import BlogPage from './pages/BlogPage';
+import ArticlePage from './pages/ArticlePage';
 import RoadmapPage from './pages/RoadmapPage';
 import NotFoundPage from './pages/NotFoundPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
@@ -49,6 +51,8 @@ function App() {
             <Route path="/whitepaper" element={<WhitepaperPage />} />
             <Route path="/documentation" element={<DocumentationPage />} />
             <Route path="/changelog" element={<ChangelogPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<ArticlePage />} />
             <Route path="/roadmap" element={<RoadmapPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />

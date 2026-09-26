@@ -1,0 +1,88 @@
+{
+ "queries": {
+  "Cozanet": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "Page 1 dominated by unrelated French namesakes (aesthetic-medicine Dr, authors, athletes, a French company registry). No Cozanet (company) result."
+  },
+  "Cozanet Technologies": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result; unrelated results only."
+  },
+  "Cozanet AEGIS": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result; unrelated academic results."
+  },
+  "Cozanet CZN": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result. CZN searches are dominated by the game 'Chaos Zero Nightmare'."
+  },
+  "CZN token Cozanet": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result; CZN game token results dominate."
+  },
+  "AEGIS Cozanet": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result; unrelated 'Cozannet' (one n) researchers dominate."
+  },
+  "CozyCrypto Cozanet": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": true,
+   "url": "https://cozanet.net/author/CozyCrypto/",
+   "notes": "cozanet.net IS indexed (legacy /author/CozyCrypto/ URL from the previous WordPress site)."
+  },
+  "Cozanet smart routing": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result."
+  },
+  "Cozanet Web3": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result."
+  },
+  "Cozanet Africa": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "Results not captured during baseline run (truncated) - treat as not checked."
+  },
+  "Cozanet financial operating system": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result. One unrelated 1910 academic citation by a different Cozanet."
+  },
+  "Cozanet blockchain infrastructure": {
+   "engine": "Google (via web search)",
+   "checked": "2026-09-26T14:23:44Z",
+   "cozanet_found": false,
+   "url": null,
+   "notes": "No Cozanet result."
+  }
+ }
+}

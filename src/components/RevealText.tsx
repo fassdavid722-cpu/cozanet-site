@@ -13,6 +13,7 @@ interface RevealTextProps {
  * mask with a small stagger — the signature motion of high-end brand sites.
  * Wrapping stays natural (words break across lines) and descenders are not
  * clipped thanks to the padding/negative-margin compensation on the mask.
+ * The words remain ordinary inline text for screen readers and scrapers.
  * Respects reduced motion via the global MotionConfig in App.
  */
 export default function RevealText({
@@ -28,7 +29,6 @@ export default function RevealText({
       {words.map((word, i) => (
         <span
           key={`${word}-${i}`}
-          aria-hidden="true"
           className="inline-block overflow-hidden align-bottom pb-[0.14em] -mb-[0.14em]"
         >
           <motion.span
@@ -47,7 +47,6 @@ export default function RevealText({
           </motion.span>
         </span>
       ))}
-      <span className="sr-only">{text}</span>
     </span>
   );
 }

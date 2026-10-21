@@ -1,4 +1,5 @@
 import ScrollReveal from './ScrollReveal';
+import RevealText from './RevealText';
 
 interface SectionHeaderProps {
   label: string;
@@ -38,7 +39,7 @@ export default function SectionHeader({
           className={`text-h2 ${dark ? 'text-white' : 'text-coz-black'}`}
           style={centered ? { maxWidth, margin: '0 auto' } : { maxWidth }}
         >
-          {headline}
+          <RevealText text={headline} delay={0.05} />
         </h2>
       </ScrollReveal>
       {description && (

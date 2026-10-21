@@ -3,6 +3,13 @@ import ScrollReveal from '../components/ScrollReveal';
 
 const entries = [
   {
+    period: 'October 2026',
+    items: [
+      { title: 'Motion and polish pass', desc: 'Desktop smooth scrolling, masked headline reveals across every section, consistent black-to-white section transitions on all content pages, and site-wide reduced-motion support.' },
+      { title: 'AEGIS documentation: transfer lifecycle', desc: 'New "How AEGIS Works" section documenting the four-step path every transfer follows: request, quote, route, settle and confirm.' },
+    ],
+  },
+  {
     period: 'September 2026',
     items: [
       { title: 'Security audit pass', desc: 'Authentication guards and rate limiting added to AEGIS API routes; leaked deployment artifacts purged and verified across all deployment storage.' },
@@ -25,6 +32,7 @@ const entries = [
 
 export default function ChangelogPage() {
   return (
+    <>
     <section className="bg-white pt-[clamp(80px,10vh,140px)] pb-section">
       <div className="max-w-content mx-auto px-6">
         <ScrollReveal>
@@ -58,5 +66,7 @@ export default function ChangelogPage() {
         </div>
       </div>
     </section>
+      <div className="section-bridge-light-dark" />
+    </>
   );
 }

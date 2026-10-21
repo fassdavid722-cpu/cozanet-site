@@ -1,5 +1,6 @@
 import AegisHeroSection from '../sections/aegis/AegisHeroSection';
 import AegisFeaturesSection from '../sections/aegis/AegisFeaturesSection';
+import HowAegisWorksSection from '../sections/aegis/HowAegisWorksSection';
 import MultiRailSection from '../sections/aegis/MultiRailSection';
 import StellarSection from '../sections/aegis/StellarSection';
 import CircleArcSection from '../sections/aegis/CircleArcSection';
@@ -14,6 +15,7 @@ export default function AegisPage() {
       <AegisHeroSection />
       <div className="section-bridge-dark-light" />
       <AegisFeaturesSection />
+      <HowAegisWorksSection />
       <div className="section-bridge-light-dark" />
       <MultiRailSection />
       <div className="section-bridge-dark-light" />

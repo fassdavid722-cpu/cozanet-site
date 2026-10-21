@@ -4,6 +4,7 @@ import articles from '../content/articles.json';
 
 export default function BlogPage() {
   return (
+    <>
     <section className="bg-white pt-[clamp(80px,10vh,140px)] pb-section">
       <div className="max-w-content mx-auto px-6">
         <ScrollReveal>
@@ -30,5 +31,7 @@ export default function BlogPage() {
         </div>
       </div>
     </section>
+      <div className="section-bridge-light-dark" />
+    </>
   );
 }

@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { MotionConfig } from 'framer-motion';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SmoothScroll from './components/SmoothScroll';
 import Seo from './components/Seo';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
@@ -33,37 +35,40 @@ function ScrollToTopOnNavigate() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTopOnNavigate />
-      <Seo />
-      <div className="min-h-screen flex flex-col">
-        <Navigation />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/aegis" element={<AegisPage />} />
-            <Route path="/czn" element={<CznPage />} />
-            <Route path="/technology" element={<TechnologyPage />} />
-            <Route path="/developers" element={<DevelopersPage />} />
-            <Route path="/security" element={<SecurityPage />} />
-            <Route path="/company" element={<CompanyPage />} />
-            <Route path="/whitepaper" element={<WhitepaperPage />} />
-            <Route path="/documentation" element={<DocumentationPage />} />
-            <Route path="/changelog" element={<ChangelogPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<ArticlePage />} />
-            <Route path="/roadmap" element={<RoadmapPage />} />
-            <Route path="/privacy" element={<PrivacyPolicyPage />} />
-            <Route path="/terms" element={<TermsOfServicePage />} />
-            <Route path="/cookies" element={<CookiePolicyPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </main>
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </BrowserRouter>
+    <MotionConfig reducedMotion="user">
+      <BrowserRouter>
+        <SmoothScroll />
+        <ScrollToTopOnNavigate />
+        <Seo />
+        <div className="min-h-screen flex flex-col">
+          <Navigation />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/aegis" element={<AegisPage />} />
+              <Route path="/czn" element={<CznPage />} />
+              <Route path="/technology" element={<TechnologyPage />} />
+              <Route path="/developers" element={<DevelopersPage />} />
+              <Route path="/security" element={<SecurityPage />} />
+              <Route path="/company" element={<CompanyPage />} />
+              <Route path="/whitepaper" element={<WhitepaperPage />} />
+              <Route path="/documentation" element={<DocumentationPage />} />
+              <Route path="/changelog" element={<ChangelogPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<ArticlePage />} />
+              <Route path="/roadmap" element={<RoadmapPage />} />
+              <Route path="/privacy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms" element={<TermsOfServicePage />} />
+              <Route path="/cookies" element={<CookiePolicyPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </BrowserRouter>
+    </MotionConfig>
   );
 }
 

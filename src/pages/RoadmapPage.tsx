@@ -34,6 +34,7 @@ const tiers = [
 
 export default function RoadmapPage() {
   return (
+    <>
     <section className="bg-white pt-[clamp(80px,10vh,140px)] pb-section">
       <div className="max-w-content mx-auto px-6">
         <ScrollReveal>
@@ -82,5 +83,7 @@ export default function RoadmapPage() {
         </ScrollReveal>
       </div>
     </section>
+      <div className="section-bridge-light-dark" />
+    </>
   );
 }

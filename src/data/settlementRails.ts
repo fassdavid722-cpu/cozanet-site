@@ -41,8 +41,8 @@ export const settlementRails: SettlementRail[] = [
   {
     name: 'Stellar',
     shortName: 'Stellar',
-    status: 'integration_in_progress',
-    statusLabel: 'Integration in progress',
+    status: 'live',
+    statusLabel: 'Live',
     description: 'Stellar settlement and payment rail, live in production: deterministic wallet derivation and in-memory transaction signing through the Protected Wallet Service, with a stablecoin and payment infrastructure focus.',
   },
   {

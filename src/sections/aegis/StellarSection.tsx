@@ -10,7 +10,7 @@ export default function StellarSection() {
         <SectionHeader
           label="Expansion"
           headline="Expanding AEGIS to Stellar."
-          description="AEGIS is being expanded to support Stellar as an additional settlement and payment rail, with an initial focus on stablecoin and payment infrastructure."
+          description="Stellar is now a live settlement and payment rail in AEGIS, with an initial focus on stablecoin and payment infrastructure."
         />
 
         <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-[800px]">
@@ -21,7 +21,7 @@ export default function StellarSection() {
               </div>
               <h4 className="text-h4 text-coz-black mb-2">Preserving existing architecture</h4>
               <p className="text-[1rem] text-coz-slate leading-relaxed">
-                With Stellar integration, AEGIS will be able to route supported settlement flows through
+                AEGIS routes supported settlement flows through
                 Stellar while preserving its existing identity, wallet, authorization, transaction
                 and smart-routing architecture.
               </p>
@@ -48,10 +48,10 @@ export default function StellarSection() {
             <div className="flex items-center gap-3 px-5 py-4 rounded-card bg-coz-gold-light border border-coz-gold/30">
               <span className="w-2 h-2 rounded-full bg-coz-gold animate-pulse-dot shrink-0" />
               <p className="text-[0.9375rem] text-coz-black leading-relaxed">
-                <span className="font-medium">Integration complete — activation in progress.</span>{' '}
-                Stellar is fully built into AEGIS: wallets are derived and every transaction is signed
-                in-memory by the Protected Wallet Service. Production activation is pending final
-                deployment and live verification. No Stellar transactions are available yet.
+                <span className="font-medium">Live in production.</span>{' '}
+                Stellar is fully integrated into AEGIS: wallets are derived deterministically and every
+                transaction is signed in-memory by the Protected Wallet Service. The rail is enabled
+                in production today — the first live transfers are the next milestone.
               </p>
             </div>
           </div>

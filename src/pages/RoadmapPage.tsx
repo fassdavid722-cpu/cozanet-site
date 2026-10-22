@@ -8,6 +8,7 @@ const tiers = [
     items: [
       { title: 'AEGIS Phase One', desc: 'Custodial wallets, token swaps, and the treasury fee ledger on BNB Smart Chain — deployed and usable at aegis.cozanet.net.' },
       { title: 'Cozanet AI assistant', desc: 'In-app assistant with persistent conversation memory and extracted user facts, live in production.' },
+      { title: 'Stellar settlement rail', desc: 'Deterministic Stellar wallet derivation and in-memory transaction signing through the Protected Wallet Service — live in production and verified end-to-end. First settled transfers are the next milestone.' },
       { title: 'Notifications', desc: 'In-app notifications and transactional email via the notification engine.' },
       { title: 'Website & documentation', desc: 'This site, the security page, and the public GitHub organization.' },
     ],
@@ -16,7 +17,7 @@ const tiers = [
     label: 'In development',
     color: 'bg-amber-100 text-amber-800',
     items: [
-      { title: 'Multi-rail Smart Router', desc: 'Banking rails, mobile money, Stellar, and Circle Arc/USDC settlement — routing transfers through the cheapest or fastest rail.' },
+      { title: 'Multi-rail Smart Router', desc: 'Smart routing across settlement rails — banking rails, mobile money, and Circle Arc/USDC — routing transfers through the cheapest or fastest rail. BNB Smart Chain and Stellar are live rails today.' },
       { title: 'AEGIS Android app', desc: 'Built (debug APK and release AAB); in on-device testing. Play Store release pending.' },
       { title: 'Developer SDK & public API docs', desc: 'Gateway-routed APIs documented for third-party integration.' },
     ],

@@ -81,7 +81,7 @@ export default function StellarSection() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-4 rounded-card bg-coz-gold-light/50 border border-coz-gold/30">
                 <span className="text-label text-coz-gold-dark uppercase shrink-0 sm:w-28">Building</span>
                 <p className="text-[1rem] text-coz-black">
-                  <span className="font-medium">Stellar</span> — Integration complete: deterministic wallets and in-memory signing via the Protected Wallet Service. Activation pending final deployment and live verification.
+                  <span className="font-medium">Stellar</span> — Live in production: deterministic wallet derivation and in-memory signing via the Protected Wallet Service, verified end-to-end. First settled transfers are the next milestone.
                 </p>
               </div>
               {/* Planned */}

@@ -58,7 +58,8 @@ export default function HowAegisWorksSection() {
         </div>
         <ScrollReveal delay={0.2}>
           <p className="text-[0.875rem] text-coz-slate mt-8 max-w-[680px]">
-            BNB Smart Chain is the live production rail today; Stellar is in integration and
+            BNB Smart Chain and Stellar are the live production rails today — Stellar through the
+            Protected Wallet Service’s deterministic derivation and in-memory signing.
             Circle Arc / USDC is architecture-planned. Fee and routing behavior applies to
             supported rails as each becomes live.
           </p>

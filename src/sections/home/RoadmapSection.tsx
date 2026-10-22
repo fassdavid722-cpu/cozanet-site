@@ -20,9 +20,9 @@ const milestones = [
   {
     quarter: 'Q3 2025',
     title: 'Multi-Rail Settlement',
-    description: 'Multi-rail settlement architecture. BNB Smart Chain live, Stellar integration in progress.',
-    status: 'Planned',
-    statusColor: 'bg-coz-surface text-coz-slate',
+    description: 'Multi-rail settlement architecture. BNB Smart Chain and Stellar rails live in production.',
+    status: 'Completed',
+    statusColor: 'bg-green-50 text-green-700',
   },
   {
     quarter: 'Q4 2025',

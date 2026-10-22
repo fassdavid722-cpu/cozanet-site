@@ -9,7 +9,7 @@ export default function AegisRoadmapSection() {
         <SectionHeader
           label="Development Roadmap"
           headline="Multi-rail financial infrastructure."
-          description="AEGIS is being developed as a multi-rail financial infrastructure layer. BNB Smart Chain represents the current production environment. Stellar integration is part of the next stage of development. Circle Arc / USDC is architecture-defined as a regulated digital-dollar and automatic-failover rail, planned but not yet live."
+          description="AEGIS is a multi-rail financial infrastructure layer. BNB Smart Chain is the current production settlement environment. Stellar is live in production: deterministic wallet derivation and in-memory transaction signing through the Protected Wallet Service, verified end-to-end. Circle Arc / USDC is architecture-defined as a regulated digital-dollar and automatic-failover rail, planned but not yet live."
           dark
         />
 
@@ -66,7 +66,7 @@ export default function AegisRoadmapSection() {
               <span className="text-coz-slate-light text-[0.75rem]">↓</span>
               <span className="text-[0.8125rem] text-coz-slate">Multi-rail settlement layer</span>
               <span className="text-coz-slate-light text-[0.75rem]">↓</span>
-              <span className="text-[0.75rem] text-coz-slate-light">BNB Smart Chain (current) · Stellar (next) · Circle Arc / USDC (planned) · Additional rails (future)</span>
+              <span className="text-[0.75rem] text-coz-slate-light">BNB Smart Chain (live) · Stellar (live) · Circle Arc / USDC (planned) · Additional rails (future)</span>
             </div>
           </div>
         </ScrollReveal>

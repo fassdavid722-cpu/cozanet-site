@@ -11,7 +11,7 @@ const integrations = [
   {
     icon: <Route size={22} />,
     title: 'Multi-Rail Settlement',
-    desc: 'AEGIS routes supported transactions through appropriate settlement rails. BNB Smart Chain is live; the Stellar integration is complete and pending production activation; Circle Arc / USDC is architecture-defined and planned; additional rails are planned.',
+    desc: 'AEGIS routes supported transactions through appropriate settlement rails. BNB Smart Chain and Stellar are live in production — Stellar through deterministic wallet derivation and in-memory signing via the Protected Wallet Service. Circle Arc / USDC is architecture-defined and planned; additional rails are planned.',
   },
   {
     icon: <Layers size={22} />,

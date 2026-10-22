@@ -6,7 +6,7 @@ const entries = [
     period: 'October 2026',
     items: [
       { title: 'Backend hardening and infrastructure audit', desc: 'Full 21-engine health verification, cron authentication completed, per-engine API credentials for notifications and identity, and durable fee collection confirmed end-to-end.' },
-      { title: 'AEGIS Stellar integration complete', desc: 'Stellar settlement rail fully built: deterministic wallet derivation and in-memory transaction signing through the Protected Wallet Service. Now live in production: rail enabled, with deterministic wallet derivation and in-memory transaction signing through the Protected Wallet Service verified end-to-end.' },
+      { title: 'AEGIS Stellar integration complete', desc: 'Stellar is live in production: deterministic wallet derivation and in-memory transaction signing through the Protected Wallet Service, verified end-to-end. First settled transfers are the next milestone.' },
       { title: 'Motion and polish pass', desc: 'Desktop smooth scrolling, masked headline reveals across every section, consistent black-to-white section transitions on all content pages, and site-wide reduced-motion support.' },
       { title: 'AEGIS documentation: transfer lifecycle', desc: 'New "How AEGIS Works" section documenting the four-step path every transfer follows: request, quote, route, settle and confirm.' },
     ],

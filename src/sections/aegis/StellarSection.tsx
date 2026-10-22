@@ -48,9 +48,10 @@ export default function StellarSection() {
             <div className="flex items-center gap-3 px-5 py-4 rounded-card bg-coz-gold-light border border-coz-gold/30">
               <span className="w-2 h-2 rounded-full bg-coz-gold animate-pulse-dot shrink-0" />
               <p className="text-[0.9375rem] text-coz-black leading-relaxed">
-                <span className="font-medium">Integration in progress.</span>{' '}
-                Stellar is not yet live on AEGIS. This is a planned and in-development integration.
-                No Stellar transactions are currently available through AEGIS.
+                <span className="font-medium">Integration complete — activation in progress.</span>{' '}
+                Stellar is fully built into AEGIS: wallets are derived and every transaction is signed
+                in-memory by the Protected Wallet Service. Production activation is pending final
+                deployment and live verification. No Stellar transactions are available yet.
               </p>
             </div>
           </div>
@@ -80,7 +81,7 @@ export default function StellarSection() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-4 rounded-card bg-coz-gold-light/50 border border-coz-gold/30">
                 <span className="text-label text-coz-gold-dark uppercase shrink-0 sm:w-28">Building</span>
                 <p className="text-[1rem] text-coz-black">
-                  <span className="font-medium">Stellar</span> — Integration in progress, focused on stablecoin and payment settlement.
+                  <span className="font-medium">Stellar</span> — Integration complete: deterministic wallets and in-memory signing via the Protected Wallet Service. Activation pending final deployment and live verification.
                 </p>
               </div>
               {/* Planned */}

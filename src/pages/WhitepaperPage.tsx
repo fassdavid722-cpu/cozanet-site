@@ -80,7 +80,7 @@ const distribution = [
 const roadmap = [
   { q: 'Q1 2025', title: 'AEGIS Core Launch', desc: 'Wallet infrastructure, payment processing, and business finance tools.' },
   { q: 'Q2 2025', title: 'AI Financial Assistant', desc: 'Intelligent assistant for financial analysis and automated recommendations within AEGIS.' },
-  { q: 'Q3 2025', title: 'Multi-Rail Settlement', desc: 'Multi-rail settlement architecture supporting BNB Smart Chain (live), with Stellar integration in progress.' },
+  { q: 'Q3 2025', title: 'Multi-Rail Settlement', desc: 'Multi-rail settlement architecture supporting BNB Smart Chain (live), with the Stellar integration complete pending activation.' },
   { q: 'Q4 2025', title: 'Developer Platform v2', desc: 'Enhanced APIs, new SDKs, webhook system, and developer dashboard.' },
   { q: 'Q1 2026', title: 'Enterprise Suite', desc: 'Compliance tools, advanced reporting, multi-entity management, white-label solutions.' },
   { q: 'Q2 2026', title: 'CZN Ecosystem', desc: 'Full token utility integration across all products, governance framework, ecosystem rewards.' },
@@ -199,7 +199,7 @@ export default function WhitepaperPage() {
           <SectionHeader label="4. AEGIS: Programmable Financial Infrastructure" headline="The smart-routing layer at the center of Cozanet." />
           <ScrollReveal delay={0.1}>
             <p className="text-[1rem] text-coz-slate leading-relaxed mt-8">
-              AEGIS combines identity, wallet infrastructure, transaction authorization, smart routing, settlement orchestration and payment infrastructure into a unified financial operating layer. Its core function is smart routing: supported transactions are routed through appropriate settlement rails — currently BNB Smart Chain, with Stellar integration in progress — instead of requiring the user to manage each rail manually.
+              AEGIS combines identity, wallet infrastructure, transaction authorization, smart routing, settlement orchestration and payment infrastructure into a unified financial operating layer. Its core function is smart routing: supported transactions are routed through appropriate settlement rails — currently BNB Smart Chain, with the Stellar rail built and pending activation — instead of requiring the user to manage each rail manually.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>

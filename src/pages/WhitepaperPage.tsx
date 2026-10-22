@@ -199,7 +199,7 @@ export default function WhitepaperPage() {
           <SectionHeader label="4. AEGIS: Programmable Financial Infrastructure" headline="The smart-routing layer at the center of Cozanet." />
           <ScrollReveal delay={0.1}>
             <p className="text-[1rem] text-coz-slate leading-relaxed mt-8">
-              AEGIS combines identity, wallet infrastructure, transaction authorization, smart routing, settlement orchestration and payment infrastructure into a unified financial operating layer. Its core function is smart routing: supported transactions are routed through appropriate settlement rails — currently BNB Smart Chain, with the Stellar rail built and pending activation — instead of requiring the user to manage each rail manually.
+              AEGIS combines identity, wallet infrastructure, transaction authorization, smart routing, settlement orchestration and payment infrastructure into a unified financial operating layer. Its core function is smart routing: supported transactions are routed through appropriate settlement rails — currently BNB Smart Chain and Stellar, both live in production — instead of requiring the user to manage each rail manually.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
